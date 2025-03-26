@@ -5,7 +5,17 @@ SMODS.Atlas {
 	py = 95
 }
 
---Gains 20 Chips, when 3 or more face cards are discarded at the same time.
+--Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
+--These are Preservation cards
+function Card:is_preservation(from_boss)
+    if self.debuff and not from_boss then return end
+    local id = self:get_id()
+    if id == 14 or id == 2 or id == 4 or id == 8 then
+        return true
+    end
+end
+
+--Gains 20 Chips, when 3 or more face cards are discarded at the same time
 SMODS.Joker {
 	key = 'scdrl_survivor',
 	atlas = 'scadrial',
@@ -57,7 +67,7 @@ SMODS.Joker {
 	end
 }
 
---Retriggers all Lucky cards twice 
+--Retriggers all Lucky cards 
 SMODS.Joker {
 	key = 'scdrl_vin',
 	atlas = 'scadrial',
@@ -70,16 +80,80 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Vin',
 		text = {
-			'Retriggers all {c:attention}Lucky{} cards twice'
+			'Retriggers all {c:attention}Lucky{} cards'
 		}
 	},
 	calculate = function(self, card, context)
-		if context.repetition and context.cardarea == G.play then	
+        if context.repetition and context.cardarea == G.play then    
+			if SMODS.has_enhancement(context.other_card, 'm_lucky') then
+                    return {
+                        repetitions = 1,
+                    }
+            end
+        end
+    end
+}
+
+--Earn $2 per scored preservation numbers, dies after 8 rounds
+SMODS.Joker {
+	key = 'dockson',
+	atlas = 'scadrial',
+	pos = { x = 1, y = 0 }, -- TBD after new art
+	rarity = 1,
+	cost = 4,
+	unlocked = true,
+	discovered = true,
+	blueprint_compat = true,
+	eternal_compat = false,
+	config = { extra = { gold = 2, rounds = 2 } }, 
+	loc_txt = {
+		name = 'Dockson',
+		text = {
+			'Earn {C:gold}$#1#{} per scored {C:attention}Preservation{} Card',
+			'Destroyed after #2# rounds',
+			'{C:inactive}({C:attention}Preservation{} {C:inactive}cards are A, 2, 4, and 8)',
+		}
+	},
+	loc_vars = function(self, info_queue, card)
+		return {
+			vars = { 
+				card.ability.extra.gold, 
+				card.ability.extra.rounds 
+			} 
+		}
+	end,
+	calculate = function(self, card, context)
+		if context.end_of_round and not context.blueprint and not context.repetition and not context.individual then
+			if card.ability.extra.rounds == 1 then
+				G.E_MANAGER:add_event(Event({
+					func = function()
+						play_sound('tarot1')
+						card.T.r = -0.2
+						card:juice_up(0.3, 0.4)
+						card.states.drag.is = true
+						card.children.center.pinch.x = true
+						G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+							func = function()
+									G.jokers:remove_card(card)
+									card:remove()
+									card = nil
+								return true; end})) 
+						return true
+					end
+				})) 
+				return {
+					message = localize('k_eaten_ex'),
+					colour = G.C.FILTER
+				}
+			else
+				card.ability.extra.rounds = card.ability.extra.rounds - 1
+			end
+		end
+		if context.individual and context.cardarea == G.play then
 			for k, v in ipairs(context.scoring_hand) do
-				if SMODS.has_enhancement(v, 'm_lucky') then
+				if v:is_preservation() then 
 					return {
-						message = "Again!",
-                        repetitions = 2,
+						dollars = card.ability.extra.gold
 					}
 				end
 			end
