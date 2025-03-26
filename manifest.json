@@ -1,0 +1,15 @@
+{
+	"id": "cosmere",
+	"name": "Cosmere",
+	"display_name": "Cosmere",
+	"author": ["Cephandrius", "Aakankshy"],
+	"description": "A Cosmere themed mod for Balatro!",
+	"prefix": "csmr",
+	"main_file": "src/joker/scadrial.lua",
+	"priority": 14,
+	"badge_colour": "B80F0A",
+	"version": "1.0.0",
+	"dependencies": [
+        "Steamodded (>=1.0.0~BETA-0315b)"
+    ]
+}
