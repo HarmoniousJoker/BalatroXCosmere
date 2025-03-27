@@ -65,7 +65,7 @@ SMODS.Joker {
 --Dockson: Earn $2 per scored preservation numbers, dies after 8 rounds
 SMODS.Joker {
 	key = 'dockson',
-	atlas = 'scadrial',
+	atlas = 'dockson',  -- TBD after new art
 	pos = { x = 1, y = 0 }, -- TBD after new art
 	rarity = 1,
 	cost = 4,
@@ -122,14 +122,19 @@ SMODS.Joker {
 --Spook: Upgrade Poker Hand every 8th time it is played
 SMODS.Joker {
 	key = 'spook',
-	atlas = 'scadrial',
-	pos = { x = 1, y = 0 }, -- TBD after new art
+	atlas = 'spook', -- TBD after new art
+	pos = { x = 0, y = 0 }, -- TBD after new art
 	rarity = 2,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
-	blueprint_compat = true,
-	config = { extra = { hands = 8 } },
+	blueprint_compat = false,
+	config = {
+		extra = {
+			hands = 8,
+			played_hands = {}
+		}
+	},
 	loc_vars = function(self, info_queue, card)
 		return { 
 			vars = { 
@@ -137,4 +142,15 @@ SMODS.Joker {
 			} 
 		}
 	end,
+	calculate = function(self, card, context)
+        if context.before then
+			card.ability.extra.played_hands[context.scoring_name] = (card.ability.extra.played_hands[context.scoring_name] or 0) + 1
+			if card.ability.extra.played_hands[context.scoring_name] % card.ability.extra.hands == 0 then
+				return {
+					level_up = true,
+					message = localize('k_level_up_ex')
+				}
+			end
+        end
+	end
 }

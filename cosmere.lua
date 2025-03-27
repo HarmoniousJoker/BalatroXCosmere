@@ -12,6 +12,20 @@ SMODS.Atlas{
     py = 34
 }
 
+SMODS.Atlas {
+	key = 'dockson',
+	path = 'dockson.png',
+	px = 71,
+	py = 95
+}
+
+SMODS.Atlas {
+	key = 'spook',
+	path = 'spook.png',
+	px = 71,
+	py = 95
+}
+
 SMODS.current_mod.extra_tabs = function()
     local scale = 0.5
     return {

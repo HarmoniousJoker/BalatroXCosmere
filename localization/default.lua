@@ -6,7 +6,7 @@ return {
         Enhanced={},
         Joker={
             j_csmr_survivor = {
-                name = 'Survivor of Hathsin',
+                name = 'Kelsier',
                 text = {
                     'This Joker gains {C:blue}+#1#{} Chips,',
                     'if {C:attention}3{} or more {C:attention}face cards{}',
