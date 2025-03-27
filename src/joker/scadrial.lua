@@ -1,6 +1,6 @@
---Survivor of Hathsin: Gains 20 Chips, when 3 or more face cards are discarded at the same time
+--Kelsier: Gains 20 Chips, when 3 or more face cards are discarded at the same time
 SMODS.Joker {
-	key = 'survivor',
+	key = 'kelsier',
 	atlas = 'scadrial',
 	pos = { x = 0, y = 0 },
 	rarity = 2,

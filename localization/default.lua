@@ -5,7 +5,7 @@ return {
         Edition={},
         Enhanced={},
         Joker={
-            j_csmr_survivor = {
+            j_csmr_kelsier = {
                 name = 'Kelsier',
                 text = {
                     'This Joker gains {C:blue}+#1#{} Chips,',
