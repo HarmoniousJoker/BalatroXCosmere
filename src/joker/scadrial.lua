@@ -1,23 +1,6 @@
-SMODS.Atlas {
-	key = 'scadrial',
-	path = 'scadrial.png',
-	px = 71,
-	py = 95
-}
-
---Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
---These are Preservation cards
-function Card:is_preservation(from_boss)
-    if self.debuff and not from_boss then return end
-    local id = self:get_id()
-    if id == 14 or id == 2 or id == 4 or id == 8 then
-        return true
-    end
-end
-
---Gains 20 Chips, when 3 or more face cards are discarded at the same time
+--Survivor of Hathsin: Gains 20 Chips, when 3 or more face cards are discarded at the same time
 SMODS.Joker {
-	key = 'scdrl_survivor',
+	key = 'survivor',
 	atlas = 'scadrial',
 	pos = { x = 0, y = 0 },
 	rarity = 2,
@@ -26,15 +9,6 @@ SMODS.Joker {
 	discovered = true,
 	blueprint_compat = true,
 	config = { extra = { chip = 0, chip_mod = 20, faces = 3 } },
-	loc_txt = {
-		name = 'Survivor of Hathsin',
-		text = {
-			'This Joker gains {C:blue}+#1#{} Chips,',
-			'if {C:attention}3{} or more {C:attention}face cards{}',
-			'are discarded at the same time',
-			'{C:inactive}(Currently {C:blue}+#2#{C:inactive} Chips)'
-		}
-	},
 	loc_vars = function(self, info_queue, card)
 		return { 
 			vars = { 
@@ -67,9 +41,9 @@ SMODS.Joker {
 	end
 }
 
---Retriggers all Lucky cards 
+--Vin: Retriggers all Lucky cards 
 SMODS.Joker {
-	key = 'scdrl_vin',
+	key = 'vin',
 	atlas = 'scadrial',
 	pos = { x = 1, y = 0 }, -- TBD after new art
 	rarity = 2,
@@ -77,12 +51,6 @@ SMODS.Joker {
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
-	loc_txt = {
-		name = 'Vin',
-		text = {
-			'Retriggers all {c:attention}Lucky{} cards'
-		}
-	},
 	calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play then    
 			if SMODS.has_enhancement(context.other_card, 'm_lucky') then
@@ -94,7 +62,7 @@ SMODS.Joker {
     end
 }
 
---Earn $2 per scored preservation numbers, dies after 8 rounds
+--Dockson: Earn $2 per scored preservation numbers, dies after 8 rounds
 SMODS.Joker {
 	key = 'dockson',
 	atlas = 'scadrial',
@@ -105,15 +73,7 @@ SMODS.Joker {
 	discovered = true,
 	blueprint_compat = true,
 	eternal_compat = false,
-	config = { extra = { gold = 2, rounds = 2 } }, 
-	loc_txt = {
-		name = 'Dockson',
-		text = {
-			'Earn {C:gold}$#1#{} per scored {C:attention}Preservation{} Card',
-			'Destroyed after #2# rounds',
-			'{C:inactive}({C:attention}Preservation{} {C:inactive}cards are A, 2, 4, and 8)',
-		}
-	},
+	config = { extra = { gold = 2, rounds = 8 } },
 	loc_vars = function(self, info_queue, card)
 		return {
 			vars = { 
@@ -142,20 +102,18 @@ SMODS.Joker {
 					end
 				})) 
 				return {
-					message = localize('k_eaten_ex'),
+					message = localize('k_eaten_ex'), --Message to be customized later
 					colour = G.C.FILTER
 				}
 			else
 				card.ability.extra.rounds = card.ability.extra.rounds - 1
 			end
 		end
-		if context.individual and context.cardarea == G.play then
-			for k, v in ipairs(context.scoring_hand) do
-				if v:is_preservation() then 
-					return {
-						dollars = card.ability.extra.gold
-					}
-				end
+		if context.individual and context.cardarea == G.play and context.scoring_hand then
+			if context.other_card:is_preservation() then 
+				return {
+					dollars = card.ability.extra.gold
+				}
 			end
 		end
 	end
