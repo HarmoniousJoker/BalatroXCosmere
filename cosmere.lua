@@ -38,7 +38,7 @@ SMODS.current_mod.extra_tabs = function()
                     text = "Programming: HarmoniousJoker",
                     shadow = false,
                     scale = scale,
-                    colour = G.C.GREEN
+                    colour = G.C.YELLOW
                     }
                 }
                 }
@@ -56,7 +56,7 @@ SMODS.current_mod.extra_tabs = function()
                     text = "Art: Aakankshy",
                     shadow = false,
                     scale = scale,
-                    colour = G.C.PURPLE
+                    colour = G.C.GREEN
                     }
                 },
                 }
@@ -68,8 +68,7 @@ SMODS.current_mod.extra_tabs = function()
 end
 
 --Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
-function Card:is_preservation(from_boss)
-    if self.debuff and not from_boss then return end
+function Card:is_preservation()
     local id = self:get_id()
     if id == 14 or id == 2 or id == 4 or id == 8 then
         return true

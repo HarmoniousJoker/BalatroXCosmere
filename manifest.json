@@ -6,7 +6,7 @@
 	"description": "A Cosmere themed mod for Balatro!",
 	"prefix": "csmr",
 	"main_file": "cosmere.lua",
-	"priority": 14,
+	"priority": -16,
 	"badge_colour": "B80F0A",
 	"version": "1.0.0",
 	"dependencies": [
