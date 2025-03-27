@@ -119,7 +119,7 @@ SMODS.Joker {
 	end
 }
 
---Spook:
+--Spook: Upgrade Poker Hand every 8th time it is played
 SMODS.Joker {
 	key = 'spook',
 	atlas = 'scadrial',
