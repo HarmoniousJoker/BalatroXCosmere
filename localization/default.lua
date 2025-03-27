@@ -25,13 +25,16 @@ return {
                 text = {
                     'Earn {C:gold}$#1#{} per scored {C:attention}Preservation{} Card',
                     'Destroyed after #2# rounds',
-                    '{C:inactive}({C:attention}Preservation{} {C:inactive}cards are A, 2, 4, and 8)',
+                    '{C:inactive}({C:attention}Preservation{} {C:inactive}cards are A, 2, 4, and 8)'
                 }
             },
-            -- j_csmr_spook = {
-            --     name = 'Spook',
-            --     text = 'Upgrade Poker Hand every 8th time it is played'
-            -- }
+            j_csmr_spook = {
+                name = 'Spook',
+                text = {
+                    'Upgrade Poker Hand',
+                    'every #1#th time it is played'
+                }
+            }
         },
         Other={},
         Planet={},

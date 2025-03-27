@@ -79,7 +79,7 @@ SMODS.Joker {
 			vars = { 
 				card.ability.extra.gold, 
 				card.ability.extra.rounds 
-			} 
+			}
 		}
 	end,
 	calculate = function(self, card, context)
@@ -117,4 +117,24 @@ SMODS.Joker {
 			end
 		end
 	end
+}
+
+--Spook:
+SMODS.Joker {
+	key = 'spook',
+	atlas = 'scadrial',
+	pos = { x = 1, y = 0 }, -- TBD after new art
+	rarity = 2,
+	cost = 4,
+	unlocked = true,
+	discovered = true,
+	blueprint_compat = true,
+	config = { extra = { hands = 8 } },
+	loc_vars = function(self, info_queue, card)
+		return { 
+			vars = { 
+				card.ability.extra.hands,
+			} 
+		}
+	end,
 }
