@@ -34,6 +34,14 @@ return {
                     'Upgrade Poker Hand',
                     'every #1#th time it is played'
                 }
+            },
+            j_csmr_elend = {
+                name = 'Elend',
+                text = {
+                    '{C:green}4 in 16{} chance of gaining {C:mult}+#2#{} Mult',
+                    'when a {C:attention}Face{} card is scored',
+                    '{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)'
+                }
             }
         },
         Other={},
