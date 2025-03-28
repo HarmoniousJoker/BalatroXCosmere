@@ -50,6 +50,13 @@ return {
                     '{C:green}4 in 16{} chance of becoming',
                     '{C:attention}Steel{} cards'
                 }
+            },
+            j_csmr_tindwyl = {
+                name = 'Tindwyl',
+                text = {
+                    'Played {C:attention}Jacks{}, when scored have a {C:green}2 in 16{}',
+                    'chance of becoming a {C:attention}King{} or {C:attention}Queen{}'
+                }
             }
         },
         Other={},
