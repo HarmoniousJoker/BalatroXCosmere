@@ -65,7 +65,7 @@ SMODS.Joker {
 --Dockson: Earn $2 per scored preservation numbers, dies after 8 rounds
 SMODS.Joker {
 	key = 'dockson',
-	atlas = 'dockson',  -- TBD after new art
+	atlas = 'scadrial',  -- TBD after new art
 	pos = { x = 1, y = 0 }, -- TBD after new art
 	rarity = 1,
 	cost = 4,
@@ -122,7 +122,7 @@ SMODS.Joker {
 --Spook: Upgrade Poker Hand every 8th time it is played
 SMODS.Joker {
 	key = 'spook',
-	atlas = 'spook', -- TBD after new art
+	atlas = 'scadrial', -- TBD after new art
 	pos = { x = 0, y = 0 }, -- TBD after new art
 	rarity = 2,
 	cost = 4,
@@ -159,7 +159,7 @@ SMODS.Joker {
 SMODS.Joker {
 	key = 'elend',
 	atlas = 'scadrial',
-	pos = { x = 0, y = 0 },
+	pos = { x = 1, y = 0 },
 	rarity = 2,
 	cost = 4,
 	unlocked = true,
@@ -195,6 +195,33 @@ SMODS.Joker {
 			return {
 				mult = card.ability.extra.mult
 			}
+		end
+	end
+}
+
+--Marsh: Played cards that are not scored have an 4 in 16 chance of becoming Steel cards
+SMODS.Joker {
+	key = 'marsh',
+	atlas = 'scadrial',
+	pos = { x = 0, y = 0 },
+	rarity = 2,
+	cost = 4,
+	unlocked = true,
+	discovered = true,
+	blueprint_compat = true,
+	config = { extra = { odds = 4 } },
+	calculate = function(self, card, context)
+		if context.individual and context.cardarea == 'unscored' then
+			local upgraded_marsh = 0
+			if pseudorandom('marsh') < G.GAME.probabilities.normal/card.ability.extra.odds then
+				upgraded_marsh = upgraded_marsh + 1
+				context.other_card:set_ability(G.P_CENTERS.m_steel, nil, true)
+				return {
+					message = 'Upgraded!',
+					color = G.C.MULT,
+					message_card = card
+				}
+			end
 		end
 	end
 }

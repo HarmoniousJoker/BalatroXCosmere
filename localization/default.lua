@@ -23,7 +23,7 @@ return {
             j_csmr_dockson = {
                 name = 'Dockson',
                 text = {
-                    'Earn {C:gold}$#1#{} per scored {C:attention}Preservation{} Card',
+                    'Earn {C:gold}$#1#{} per scored {C:attention}Preservation{} card',
                     'Destroyed after #2# rounds',
                     '{C:inactive}({C:attention}Preservation{} {C:inactive}cards are A, 2, 4, and 8)'
                 }
@@ -41,6 +41,14 @@ return {
                     '{C:green}4 in 16{} chance of gaining {C:mult}+#2#{} Mult',
                     'when a {C:attention}Face{} card is scored',
                     '{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)'
+                }
+            },
+            j_csmr_marsh = {
+                name = 'Marsh',
+                text = {
+                    'Played cards that are not scored have',
+                    '{C:green}4 in 16{} chance of becoming',
+                    '{C:attention}Steel{} cards'
                 }
             }
         },
