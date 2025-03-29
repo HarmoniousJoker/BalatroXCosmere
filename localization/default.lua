@@ -9,7 +9,7 @@ return {
                 name = 'Kelsier',
                 text = {
                     'This Joker gains {C:blue}+#1#{} Chips,',
-                    'if {C:attention}3{} or more {C:attention}face cards{}',
+                    'if {C:attention}3{} or more {C:attention}Face Cards{}',
                     'are discarded at the same time',
                     '{C:inactive}(Currently {C:blue}+#2#{C:inactive} Chips)'
                 }
@@ -17,15 +17,15 @@ return {
             j_csmr_vin = {
                 name = 'Vin',
 		        text = {
-                    'Retriggers all {c:attention}Lucky{} cards'
+                    'Retriggers all {C:attention}Lucky Cards{}'
 		        }
             },
             j_csmr_dockson = {
                 name = 'Dockson',
                 text = {
-                    'Earn {C:gold}$#1#{} per scored {C:attention}Preservation{} card',
+                    'Earn {C:gold}$#1#{} per scored {C:attention}Preservation Card{}',
                     'Destroyed after #2# rounds',
-                    '{C:inactive}({C:attention}Preservation{} {C:inactive}cards are A, 2, 4, and 8)'
+                    '{C:inactive}({C:attention}Preservation Cards{} {C:inactive}are A, 2, 4, and 8)'
                 }
             },
             j_csmr_spook = {
@@ -39,7 +39,7 @@ return {
                 name = 'Elend',
                 text = {
                     '{C:green}4 in 16{} chance of gaining {C:mult}+#2#{} Mult',
-                    'when a {C:attention}Face{} card is scored',
+                    'when a {C:attention}Face Card{} is scored',
                     '{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)'
                 }
             },
@@ -48,7 +48,7 @@ return {
                 text = {
                     'Played cards that are not scored have',
                     '{C:green}4 in 16{} chance of becoming',
-                    '{C:attention}Steel{} cards'
+                    '{C:attention}Steel Cards{}'
                 }
             },
             j_csmr_tindwyl = {
@@ -64,7 +64,16 @@ return {
                     '{C:green}Preserver{} Jokers',
                     'each give {X:mult,C:white} X#1# {} Mult'
                 }
-            }
+            },
+            j_csmr_hammond = {
+                name = 'Hammond',
+                text = {
+                    'Gives {C:chips}+#1#{} Mult for',
+                    'each {C:attention}Stone Card',
+                    'in your {C:attention}full deck',
+                    '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
+                },
+            },
         },
         Other={},
         Planet={},
