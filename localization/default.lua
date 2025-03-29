@@ -57,6 +57,13 @@ return {
                     'Played {C:attention}Jacks{}, when scored have a {C:green}2 in 16{}',
                     'chance of becoming a {C:attention}King{} or {C:attention}Queen{}'
                 }
+            },
+            j_csmr_sazed = {
+                name = 'Sazed',
+                text = {
+                    '{C:green}Preserver{} Jokers',
+                    'each give {X:mult,C:white} X#1# {} Mult'
+                }
             }
         },
         Other={},
@@ -73,7 +80,9 @@ return {
         blind_states={},
         challenge_names={},
         collabs={},
-        dictionary={},
+        dictionary={
+            k_csmr_preserver = {'Preserver'},
+        },
         high_scores={},
         labels={},
         poker_hand_descriptions={},

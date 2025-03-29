@@ -6,23 +6,35 @@ SMODS.Atlas {
 }
   
 SMODS.Atlas{
-    key = "modicon",
-    path = "modicon.png",
+    key = 'modicon',
+    path = 'modicon.png',
     px = 34,
     py = 34
 }
 
-SMODS.optional_features = {cardareas= {unscored=true}}
+G.C.CSMR_PRESERVERS = HEX('000000')
+SMODS.Rarity{
+  key = 'preserver',
+  badge_colour = G.C.CSMR_PRESERVERS,
+  default_weight = 0.75,
+  pools = {['Joker'] = true},
+}
+
+SMODS.optional_features = {
+    cardareas = {
+        unscored=true
+    }
+}
 
 SMODS.current_mod.extra_tabs = function()
     local scale = 0.5
     return {
-        label = "Credits",
+        label = 'Credits',
         tab_definition_function = function()
         return {
             n = G.UIT.ROOT,
             config = {
-            align = "cm",
+            align = 'cm',
             padding = 0.05,
             colour = G.C.CLEAR,
             },
@@ -31,13 +43,13 @@ SMODS.current_mod.extra_tabs = function()
                 n = G.UIT.R,
                 config = {
                 padding = 0,
-                align = "cm"
+                align = 'cm'
                 },
                 nodes = {
                 {
                     n = G.UIT.T,
                     config = {
-                    text = "Programming: HarmoniousJoker",
+                    text = 'Programming: HarmoniousJoker',
                     shadow = false,
                     scale = scale,
                     colour = G.C.YELLOW
@@ -49,13 +61,13 @@ SMODS.current_mod.extra_tabs = function()
                 n = G.UIT.R,
                 config = {
                 padding = 0,
-                align = "cm"
+                align = 'cm'
                 },
                 nodes = {
                 {
                     n = G.UIT.T,
                     config = {
-                    text = "Art: Aakankshy",
+                    text = 'Art: Aakankshy',
                     shadow = false,
                     scale = scale,
                     colour = G.C.GREEN
@@ -77,11 +89,11 @@ function Card:is_preservation()
     end
 end
 
-local mod_path = "" .. SMODS.current_mod.path
+local mod_path = '' .. SMODS.current_mod.path
 local function load_folder(folder)
     local files = NFS.getDirectoryItems(mod_path .. folder)
     for i, file in ipairs(files) do
-        SMODS.load_file(folder .. "/" .. file)()
+        SMODS.load_file(folder .. '/' .. file)()
     end
 end
 
