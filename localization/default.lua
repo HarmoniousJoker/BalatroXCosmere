@@ -55,8 +55,9 @@ return {
                 name = 'Tindwyl',
                 text = {
                     'Played {C:attention}Preservation Cards{}, when scored,',
-                    'have a {C:green}2 in 16{} chance of becoming a '
+                    'have a {C:green}2 in 16{} chance of becoming a',
                     '{C:attention}King{} or {C:attention}Queen{}',
+                    '{C:inactive}(This will not change the poker hand)',
                     '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)'
                 }
             },
