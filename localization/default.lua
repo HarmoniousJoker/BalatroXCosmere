@@ -25,7 +25,7 @@ return {
                 text = {
                     'Earn {C:gold}$#1#{} per scored {C:attention}Preservation Card{}',
                     'Destroyed after #2# rounds',
-                    '{C:inactive}({C:attention}Preservation Cards{} {C:inactive}are A, 2, 4, and 8)'
+                    '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)'
                 }
             },
             j_csmr_spook = {
@@ -54,8 +54,10 @@ return {
             j_csmr_tindwyl = {
                 name = 'Tindwyl',
                 text = {
-                    'Played {C:attention}Jacks{}, when scored have a {C:green}2 in 16{}',
-                    'chance of becoming a {C:attention}King{} or {C:attention}Queen{}'
+                    'Played {C:attention}Preservation Cards{}, when scored,',
+                    'have a {C:green}2 in 16{} chance of becoming a '
+                    '{C:attention}King{} or {C:attention}Queen{}',
+                    '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)'
                 }
             },
             j_csmr_sazed = {

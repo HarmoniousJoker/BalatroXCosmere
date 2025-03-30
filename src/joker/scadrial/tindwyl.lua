@@ -1,4 +1,4 @@
---Tindwyl: Played Jacks when scored have a 2 in 16 chance of becoming a King or Queen
+--Tindwyl: Played Preservation Cards, when scored, have a 2 in 16 chance of becoming a King or Queen
 SMODS.Joker {
 	key = 'tindwyl',
 	atlas = 'scadrial',
@@ -8,10 +8,10 @@ SMODS.Joker {
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
-	config = { extra = { init_odds = 1, end_odds = 2 } },
+	config = { extra = { init_odds = 8, end_odds = 2 } },
 	calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.scoring_hand then
-            if context.other_card:get_id() == 11 then
+            if context.other_card:is_preservation() then
                 if pseudorandom('tindwyl_one') < G.GAME.probabilities.normal/card.ability.extra.init_odds then
                     local jack_card = context.other_card
 					if pseudorandom('tindwyl_two') < G.GAME.probabilities.normal/card.ability.extra.end_odds then
