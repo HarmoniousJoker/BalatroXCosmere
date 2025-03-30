@@ -1,6 +1,6 @@
---Spook: Upgrade Poker Hand every 8th time it is played
+--Lestibournes: Upgrade Poker Hand every 8th time it is played
 SMODS.Joker {
-	key = 'spook',
+	key = 'lestibournes',
 	atlas = 'scadrial', -- TBD after new art
 	pos = { x = 0, y = 0 }, -- TBD after new art
 	rarity = 'csmr_preserver',

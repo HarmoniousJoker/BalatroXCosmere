@@ -28,8 +28,8 @@ return {
                     '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)'
                 }
             },
-            j_csmr_spook = {
-                name = 'Spook',
+            j_csmr_lestibournes = {
+                name = 'Lestibournes',
                 text = {
                     'Upgrade Poker Hand',
                     'every #1#th time it is played'
@@ -85,6 +85,13 @@ return {
                     'Chances are doubled each time',
                     '{C:attention}Boss Blind{} is not disabled',
                     '{C:inactive}(Resets after disabling {C:attention}Boss Blind{C:inactive})',
+                },
+            },
+            j_csmr_edgard = {
+                name = 'Edgard',
+                text = {
+                    'Sell this Joker to immediately gain 75%',
+                    'of required chips for this Blind'
                 },
             },
         },
