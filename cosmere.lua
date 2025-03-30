@@ -1,10 +1,11 @@
-SMODS.Atlas {
-	key = 'scadrial',
-	path = 'scadrial.png',
-	px = 71,
-	py = 95
+--Optional features
+SMODS.optional_features = {
+    cardareas = {
+        unscored=true
+    }
 }
-  
+
+--Atlases
 SMODS.Atlas{
     key = 'modicon',
     path = 'modicon.png',
@@ -12,6 +13,14 @@ SMODS.Atlas{
     py = 34
 }
 
+SMODS.Atlas {
+	key = 'scadrial',
+	path = 'scadrial.png',
+	px = 71,
+	py = 95
+}
+
+--Custom Rarities
 G.C.CSMR_PRESERVERS = HEX('000000')
 SMODS.Rarity{
   key = 'preserver',
@@ -20,12 +29,7 @@ SMODS.Rarity{
   pools = {['Joker'] = true},
 }
 
-SMODS.optional_features = {
-    cardareas = {
-        unscored=true
-    }
-}
-
+--Extra tabs in Mod Menu
 SMODS.current_mod.extra_tabs = function()
     local scale = 0.5
     return {
@@ -81,6 +85,7 @@ SMODS.current_mod.extra_tabs = function()
     }
 end
 
+--Functions
 --Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
 function Card:is_preservation()
     local id = self:get_id()
@@ -89,6 +94,7 @@ function Card:is_preservation()
     end
 end
 
+--Function to load files easily
 local mod_path = '' .. SMODS.current_mod.path
 local function load_folder(folder)
     local files = NFS.getDirectoryItems(mod_path .. folder)
@@ -97,4 +103,5 @@ local function load_folder(folder)
     end
 end
 
+--File loading
 load_folder('src/joker/scadrial')
