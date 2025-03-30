@@ -81,6 +81,15 @@ return {
                     '{C:attention}Boss Blind{}',
                 },
             },
+            j_csmr_tensoon = {
+                name = 'Tensoon',
+                text = 
+                {
+                    'Copies ability of a random',
+                    'compatible {C:attention}Joker{} each {C:attention}round{}',
+                    '{C:inactive}(Currently copying: {X:attention,C:white}#1#{C:inactive}){}',
+                }
+            },
         },
         Other={},
         Planet={},
@@ -98,6 +107,8 @@ return {
         collabs={},
         dictionary={
             k_csmr_preserver = {'Preserver'},
+            k_csmr_inactive = {'Inactive'},
+            k_csmr_copy = {'Copied!'}
         },
         high_scores={},
         labels={},

@@ -97,4 +97,4 @@ local function load_folder(folder)
     end
 end
 
-load_folder('src/joker')
+load_folder('src/joker/scadrial')
