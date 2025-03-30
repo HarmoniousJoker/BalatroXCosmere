@@ -81,6 +81,7 @@ return {
                     '{C:attention}Boss Blind{}.',
                     'Chances are doubled each time',
                     '{C:attention}Boss Blind{} is not disabled',
+                    '{C:inactive}(Resets after disabling {C:attention}Boss Blind{C:inactive})',
                 },
             },
         },
