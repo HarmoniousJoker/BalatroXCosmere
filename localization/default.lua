@@ -77,8 +77,10 @@ return {
             j_csmr_cladent = {
                 name = 'Cladent',
                 text = {
-                    '{C:green}2 in 16{} chance of disabling',
-                    '{C:attention}Boss Blind{}',
+                    '{C:green}#1# in 16{} chance of disabling',
+                    '{C:attention}Boss Blind{}.',
+                    'Chances are doubled each time',
+                    '{C:attention}Boss Blind{} is not disabled',
                 },
             },
         },
