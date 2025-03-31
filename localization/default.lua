@@ -94,6 +94,14 @@ return {
                     'of required chips for this Blind'
                 },
             },
+            j_csmr_tensoon = {
+                name = 'TenSoon',
+                text = {
+                    'This Joker gains {C:mult}+#1#{} Mult when',
+                    '#3# or more {C:attention}Enhanced Cards{} are scored',
+                    '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
+                }
+            }
         },
         Other={},
         Planet={},
