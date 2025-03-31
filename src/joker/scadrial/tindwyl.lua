@@ -1,8 +1,8 @@
 --Tindwyl: Played Preservation Cards, when scored, have a 2 in 16 chance of becoming a King or Queen (This will not change the poker hand)
 SMODS.Joker {
 	key = 'tindwyl',
-	atlas = 'scadrial',
-	pos = { x = 1, y = 0 },
+	--atlas = 'scadrial',
+	pos = { x = 9, y = 9 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,
