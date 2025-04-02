@@ -108,7 +108,17 @@ return {
         Spectral={},
         Stake={},
         Tag={},
-        Tarot={},
+        Tarot={
+            c_csmr_spike={
+                name='Spike',
+                text={
+                    'Select {C:attention}2{} cards,',
+                    'apply the modifications of the {C:attention}Left Card{}',
+                    'on the {C:attention}Right Card{}, destroy the {C:attention}Left Card{}',
+                    '{C:inactive}(Drag to rearrange)',
+                },
+            },
+        },
         Voucher={},
     },
     misc = {

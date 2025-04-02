@@ -94,6 +94,25 @@ function Card:is_preservation()
     end
 end
 
+--Function to modify right card with left card's properties
+function modify_card(left, right)
+    local right = right or Card(left.T.x, left.T.y, G.CARD_W*(card_scale or 1), G.CARD_H*(card_scale or 1), G.P_CARDS.empty, G.P_CENTERS.c_base, {playing_card = playing_card})
+    right:set_ability(left.config.center)
+    right.ability.type = left.ability.type
+    if not strip_edition then 
+        right:set_edition(left.edition or {}, nil, true)
+    end
+    check_for_unlock({type = 'have_edition'})
+    right:set_seal(left.seal, true)
+    if left.params then
+        right.params = left.params
+        right.params.playing_card = playing_card
+    end
+    right.debuff = left.debuff
+    right.pinned = left.pinned
+    return right
+end
+
 --Function to load files easily
 local mod_path = '' .. SMODS.current_mod.path
 local function load_folder(folder)
@@ -105,3 +124,4 @@ end
 
 --File loading
 load_folder('src/joker/scadrial')
+load_folder('src/tarot/scadrial')
