@@ -1,8 +1,8 @@
 --Elend: 4 in 16 chance of gaining +2 mult per scored face card
 SMODS.Joker {
 	key = 'elend',
-	--atlas = 'scadrial',
-	pos = { x = 9, y = 9 },
+	atlas = 'scadrial',
+	pos = { x = 4, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,
