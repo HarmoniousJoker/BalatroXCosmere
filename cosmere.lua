@@ -14,8 +14,15 @@ SMODS.Atlas{
 }
 
 SMODS.Atlas {
-	key = 'scadrial',
-	path = 'scadrial.png',
+	key = 'scadrial_joker',
+	path = 'scadrial_joker.png',
+	px = 71,
+	py = 95
+}
+
+SMODS.Atlas {
+	key = 'scadrial_enhancement',
+	path = 'scadrial_enhancement.png',
 	px = 71,
 	py = 95
 }
@@ -71,7 +78,7 @@ SMODS.current_mod.extra_tabs = function()
                 {
                     n = G.UIT.T,
                     config = {
-                    text = 'Art: Aakankshy',
+                    text = 'Art: Aakankshy, Hollow',
                     shadow = false,
                     scale = scale,
                     colour = G.C.GREEN
@@ -125,3 +132,4 @@ end
 --File loading
 load_folder('src/joker/scadrial')
 load_folder('src/tarot/scadrial')
+load_folder('src/enhancement/scadrial')

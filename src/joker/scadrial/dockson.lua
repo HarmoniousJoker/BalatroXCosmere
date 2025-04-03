@@ -1,7 +1,7 @@
 --Dockson: Earn $2 per scored preservation numbers, dies after 8 rounds
 SMODS.Joker {
 	key = 'dockson',
-	atlas = 'scadrial',
+	atlas = 'scadrial_joker',
 	pos = { x = 3, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,

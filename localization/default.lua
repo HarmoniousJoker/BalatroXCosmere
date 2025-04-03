@@ -3,12 +3,21 @@ return {
         Back={},
         Blind={},
         Edition={},
-        Enhanced={},
+        Enhanced={
+            m_csmr_pewterdrag = {
+                name = 'Pewter Drag',
+                text = {
+                    'Always scores and gives {X:chips,C:white}x#1#{}',
+                    'base chips, destroyed after {C:attention}#2#{} uses',
+                    '{C:inactive}(Uses left: {C:attention}#3#{C:inactive})',    
+                }
+            },
+        },
         Joker={
             j_csmr_kelsier = {
                 name = 'Kelsier',
                 text = {
-                    'This Joker gains {C:blue}+#1#{} Chips,',
+                    'This Joker gains {C:chips}+#1#{} Chips,',
                     'if {C:attention}3{} or more {C:attention}Face Cards{}',
                     'are discarded at the same time',
                     '{C:inactive}(Currently {C:blue}+#2#{C:inactive} Chips)'
@@ -23,8 +32,8 @@ return {
             j_csmr_dockson = {
                 name = 'Dockson',
                 text = {
-                    'Earn {C:gold}$#1#{} per scored {C:attention}Preservation Card{}',
-                    'Destroyed after #2# rounds',
+                    'Earn {C:gold}$#1#{} per scored {C:attention}Preservation Card{},',
+                    'destroyed after #2# rounds',
                     '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)'
                 }
             },
@@ -71,9 +80,9 @@ return {
             j_csmr_hammond = {
                 name = 'Hammond',
                 text = {
-                    'Gives {C:chips}+#1#{} Mult for',
-                    'each {C:attention}Stone Card',
-                    'in your {C:attention}full deck',
+                    'Gives {C:mult}+#1#{} Mult for',
+                    'each {C:attention}Pewter Drag Card',
+                    'in your {C:attention}Full Deck',
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
                 },
             },

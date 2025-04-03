@@ -1,7 +1,7 @@
 --Sazed: Preserver Jokers each give X1 Mult
 SMODS.Joker {
 	key = 'sazed',
-	--atlas = 'scadrial',
+	--atlas = 'scadrial_joker',
 	pos = { x = 9, y = 9 },
 	rarity = 'csmr_preserver',
 	cost = 8,

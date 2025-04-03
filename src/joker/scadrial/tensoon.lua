@@ -1,7 +1,7 @@
 --Tensoon: Gains mult when 3 or more cards that are scored are enhanced cards
 SMODS.Joker {
 	key = 'tensoon',
-    --atlas = 'scadrial',
+    --atlas = 'scadrial_joker',
 	pos = { x = 9, y = 9 },
     rarity = 'csmr_preserver',
     cost = 4,

@@ -1,8 +1,8 @@
 --Vin: Retriggers all Lucky cards 
 SMODS.Joker {
 	key = 'vin',
-	atlas = 'scadrial',
-	pos = { x = 1, y = 0 }, -- TBD after new art
+	atlas = 'scadrial_joker',
+	pos = { x = 1, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,

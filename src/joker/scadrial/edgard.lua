@@ -1,7 +1,7 @@
 --Edgard: Sell this Joker to immediately gain 75% of required chips for this Blind
 SMODS.Joker {
 	key = 'edgard',
-	--atlas = 'scadrial',
+	--atlas = 'scadrial_joker',
 	pos = { x = 9, y = 9 },
 	rarity = 'csmr_preserver',
 	cost = 6,

@@ -1,7 +1,7 @@
 --Kelsier: Gains 20 Chips, when 3 or more face cards are discarded at the same time
 SMODS.Joker {
 	key = 'kelsier',
-	atlas = 'scadrial',
+	atlas = 'scadrial_joker',
 	pos = { x = 0, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,

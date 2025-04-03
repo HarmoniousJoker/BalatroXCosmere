@@ -1,7 +1,7 @@
 --Lestibournes: Upgrade Poker Hand every 8th time it is played
 SMODS.Joker {
 	key = 'lestibournes',
-	atlas = 'scadrial',
+	atlas = 'scadrial_joker',
 	pos = { x = 2, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
