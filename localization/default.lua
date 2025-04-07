@@ -4,8 +4,8 @@ return {
         Blind={},
         Edition={},
         Enhanced={
-            m_csmr_pewterdrag = {
-                name = 'Pewter Drag',
+            m_csmr_pewter = {
+                name = 'Pewter',
                 text = {
                     'Always scores and gives {X:chips,C:white}x#1#{}',
                     'base chips, destroyed after {C:attention}#2#{} uses',
@@ -81,7 +81,7 @@ return {
                 name = 'Hammond',
                 text = {
                     'Gives {C:mult}+#1#{} Mult for',
-                    'each {C:attention}Pewter Drag Card',
+                    'each {C:attention}Pewter Card',
                     'in your {C:attention}Full Deck',
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
                 },
@@ -119,12 +119,20 @@ return {
         Tag={},
         Tarot={
             c_csmr_spike={
-                name='Spike',
-                text={
+                name = 'Spike',
+                text = {
                     'Select {C:attention}2{} cards,',
                     'apply the modifications of the {C:attention}Left Card{}',
                     'on the {C:attention}Right Card{}, destroy the {C:attention}Left Card{}',
                     '{C:inactive}(Drag to rearrange)',
+                },
+            },
+            c_csmr_thug = {
+                name = 'Thug',
+                text = {
+                    'Enhances {C:attention}#1#{}',
+                    'selected cards to',
+                    '{C:attention}Pewter Cards',
                 },
             },
         },

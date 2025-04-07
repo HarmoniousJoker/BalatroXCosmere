@@ -1,5 +1,5 @@
 SMODS.Enhancement{
-    key = "pewterdrag",
+    key = "pewter",
     atlas = "scadrial_enhancement",
     pos = {x = 0, y = 0},
     discovered = true,
