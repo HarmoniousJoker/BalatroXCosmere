@@ -7,11 +7,21 @@ return {
             m_csmr_pewter = {
                 name = 'Pewter',
                 text = {
-                    'Always scores and gives {X:chips,C:white}x#1#{}',
-                    'base chips, destroyed after {C:attention}#2#{} uses',
-                    '{C:inactive}(Uses left: {C:attention}#3#{C:inactive})',    
+                    'Always scores and {C:attention}Quadruples{}',
+                    'chips, starting with base chips,',
+                    'destroyed after {C:attention}4{} uses',
+                    '{C:inactive}(Currently giving: {C:chips}#2#{C:inactive} Chips)',
+                    '{C:inactive}(Uses left: {C:attention}#3#{C:inactive})'
                 }
             },
+            m_csmr_atium = {
+                name = 'Atium',
+                text = {
+                    'Gives {C:attention}1 / #1#{} of sum of all',
+                    'base chips of {C:attention}Non-Atium{} in your {C:attention}Full Deck',
+                    '{C:inactive}(Currently giving: {C:chips}#2#{C:inactive} Chips)'
+                }
+            }
         },
         Joker={
             j_csmr_kelsier = {
