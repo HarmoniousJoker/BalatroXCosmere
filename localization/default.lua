@@ -10,7 +10,7 @@ return {
                     'Always scores and {C:attention}Quadruples{}',
                     'chips, starting with base chips,',
                     'destroyed after {C:attention}4{} uses',
-                    '{C:inactive}(Currently giving: {C:chips}#2#{C:inactive} Chips)',
+                    '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)',
                     '{C:inactive}(Uses left: {C:attention}#3#{C:inactive})'
                 }
             },
@@ -18,8 +18,8 @@ return {
                 name = 'Atium',
                 text = {
                     'Gives {C:attention}1 / #1#{} of sum of all',
-                    'base chips of {C:attention}Non-Atium{} in your {C:attention}Full Deck',
-                    '{C:inactive}(Currently giving: {C:chips}#2#{C:inactive} Chips)'
+                    'base chips of remaining cards in deck',
+                    '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)'
                 }
             }
         },
@@ -143,6 +143,14 @@ return {
                     'Enhances {C:attention}#1#{}',
                     'selected cards to',
                     '{C:attention}Pewter Cards',
+                },
+            },
+            c_csmr_seer = {
+                name = 'Seer',
+                text = {
+                    'Enhances {C:attention}#1#{}',
+                    'selected cards to',
+                    '{C:attention}Atium Cards',
                 },
             },
         },
