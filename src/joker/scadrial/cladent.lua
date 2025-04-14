@@ -1,8 +1,8 @@
 --Cladent: 2 in 16 chance of disabling Boss Blind. Chances are doubled each time Boss Blind is not disabled, resets after a successful disable
 SMODS.Joker {
 	key = 'cladent',
-	--atlas = 'scadrial_joker',
-	pos = { x = 9, y = 9 },
+	atlas = 'joker',
+	pos = { x = 0, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 6,
 	unlocked = true,

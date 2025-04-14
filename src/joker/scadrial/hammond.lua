@@ -1,8 +1,8 @@
 --Hammond: This Jokers gains +4 Mult for each Pewter Card in your full deck
 SMODS.Joker {
 	key = 'hammond',
-	--atlas = 'scadrial_joker',
-	pos = { x = 9, y = 9 },
+	atlas = 'joker',
+	pos = { x = 0, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,

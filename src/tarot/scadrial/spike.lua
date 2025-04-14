@@ -2,8 +2,8 @@
 SMODS.Consumable {
     set = 'Tarot',
     key = 'spike',
-    --atlas = 'scadrial',
-    pos = { x = 6, y = 2 },
+    atlas = 'tarot',
+    pos = { x = 0, y = 0 },
     config = {
         highlighted = 2,
     },

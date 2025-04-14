@@ -27,6 +27,42 @@ SMODS.Atlas {
 	py = 95
 }
 
+--Placeholder Atlases
+SMODS.Atlas {
+    key = 'joker',
+    path = 'temp_joker.png',
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = 'tarot',
+    path = 'temp_tarot.png',
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = 'spectral',
+    path = 'temp_spectral.png',
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = 'tarot',
+    path = 'temp_tarot.png',
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = 'voucher',
+    path = 'temp_voucher.png',
+    px = 71,
+    py = 95
+}
+
 --Custom Rarities
 G.C.CSMR_PRESERVERS = HEX('000000')
 SMODS.Rarity{
