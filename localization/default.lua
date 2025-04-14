@@ -1,7 +1,15 @@
 return {
     descriptions = {
         Back={},
-        Blind={},
+        Blind={
+            bl_csmr_lordruler = {
+                name = 'Lord Ruler',
+                text = {
+                    'Weakens Jokers by 25%',
+                    'for each hand played',
+                }
+            }
+        },
         Edition={},
         Enhanced={
             m_csmr_pewter = {

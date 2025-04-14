@@ -120,6 +120,50 @@ function modify_card(left, right)
     return right
 end
 
+--Function to alter Joker effects
+local base_calculate_joker = Card.calculate_joker
+function Card.calculate_joker(self,context)
+    multiplier = G.GAME["LordRulerMultiplier"]
+	local ret = base_calculate_joker(self, context)
+	if G.GAME.round_resets.blind_choices.Boss == 'bl_csmr_lordruler' then
+		if context.end_of_round then
+            G.GAME["LordRulerMultiplier"] = 1
+			if self.ability.name == 'Mail-In Rebate' then
+				self.ability.extra = self.ability.base_extra
+			end
+			return ret
+		end
+		if self.ability.name == 'Blueprint' or self.ability.name == 'Brainstorm' and not context.end_of_round then
+				return ret
+		end
+
+		if self.ability.name == 'Mail-In Rebate' then
+				if not self.ability.base_extra then
+						self.ability.base_extra = self.ability.extra
+				end
+				self.ability.extra = self.ability.base_extra * multiplier
+				return ret
+		end
+
+		if not ret then return ret end
+
+		-- Dollars
+		if ret.dollars then ret.dollars = ret.dollars * multiplier end
+
+		-- Mult
+		if ret.Xmult_mod then ret.Xmult_mod = ret.Xmult_mod * multiplier end
+		if ret.mult_mod then ret.mult_mod = ret.mult_mod * multiplier end
+		if ret.x_mult then ret.x_mult = ret.x_mult * multiplier end
+		if ret.h_mult then ret.h_mult = ret.h_mult * multiplier end
+		if ret.mult then ret.mult = ret.mult * multiplier end
+
+		-- Chips
+		if ret.chip_mod then ret.chip_mod = ret.chip_mod * multiplier end
+		if ret.chips then ret.chips = ret.chips * multiplier end
+		return ret
+	end
+end
+
 --Function to load files easily
 local mod_path = '' .. SMODS.current_mod.path
 local function load_folder(folder)
@@ -133,3 +177,4 @@ end
 load_folder('src/joker/scadrial')
 load_folder('src/tarot/scadrial')
 load_folder('src/enhancement/scadrial')
+load_folder('src/blind/scadrial')
