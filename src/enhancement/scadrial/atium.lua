@@ -1,8 +1,8 @@
 --Atium: Gives 1/8th of the sum of all base chips of remaining cards in deck, rounded down.
 SMODS.Enhancement{
     key = "atium",
-    atlas = "scadrial_enhancement",
-    pos = {x = 0, y = 0}, -- To be updated
+    atlas = "atium",
+    pos = {x = 0, y = 0},
     discovered = true,
     always_scores = true,
     overrides_base_rank = false,

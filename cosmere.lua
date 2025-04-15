@@ -27,6 +27,13 @@ SMODS.Atlas {
 	py = 95
 }
 
+SMODS.Atlas {
+	key = 'atium',
+	path = 'atiumcard.png',
+	px = 71,
+	py = 95
+}
+
 --Placeholder Atlases
 SMODS.Atlas {
     key = 'joker',
