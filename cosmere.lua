@@ -128,6 +128,9 @@ SMODS.current_mod.extra_tabs = function()
     }
 end
 
+--Global variables
+G.destroyed_cards = {}
+
 --Functions
 --Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
 function Card:is_preservation()
@@ -183,12 +186,82 @@ function Card.calculate_joker(self,context)
 		if ret.chip_mod then ret.chip_mod = ret.chip_mod * multiplier end
 		if ret.chips then ret.chips = ret.chips * multiplier end
 		return ret
-	else 
+	else
         return ret
     end
 end
 
---Function to load files easily
+--Function to store card information
+function card_information(other, playing_card)
+    local scale = 1
+    local card_snapshot = {}
+    card_snapshot.T = { x = other.T.x, y = other.T.y }
+    card_snapshot.width = G.CARD_W * scale
+    card_snapshot.height = G.CARD_H * scale
+    card_snapshot.playing_card = playing_card
+    card_snapshot.base = other.config.card
+    card_snapshot.center = other.config.center
+    card_snapshot.ability = {}
+    card_snapshot.ability.type = other.ability.type
+    for k, v in pairs(other.ability) do
+        if type(v) == 'table' then 
+            card_snapshot.ability[k] = copy_table(v)
+        else
+            card_snapshot.ability[k] = v
+        end
+    end
+    card_snapshot.edition = other.edition or {}
+    check_for_unlock({type = 'have_edition'})
+    card_snapshot.seal = other.seal
+    if other.params then
+        card_snapshot.params = copy_table(other.params)
+        card_snapshot.params.playing_card = playing_card
+    end
+    card_snapshot.pinned = other.pinned
+    return card_snapshot
+end
+
+--Function to capture destroyed cards' information
+local function capture_destroyed_card(context)
+    if G.STAGE == G.STAGES.RUN and context.remove_playing_cards then
+        for k, v in ipairs(context.removed) do
+            local info = card_information(v, nil, G.playing_card)
+            table.insert(G.destroyed_cards, info)
+        end
+    end
+end
+local base_calculate_context = SMODS.calculate_context
+function SMODS.calculate_context(context, return_table)
+    capture_destroyed_card(context)
+    return base_calculate_context(context, return_table)
+end
+
+-- Convert the 'value' (rank) into either a number string or a one-letter face value.
+function base_to_rank(base_rank)
+    -- Map of face names to their one-letter equivalents
+    local rankMap = {
+        ["Ace"]   = "A",
+        ["Jack"]  = "J",
+        ["Queen"] = "Q",
+        ["King"]  = "K",
+    }
+    -- If it's in faceMap (i.e., a face card), use the mapped value
+    -- Otherwise, assume it's already a numeric string (like "2", "3", "10")
+    return rankMap[base_rank] or base_rank
+end
+
+-- Convert the 'suit' into its first letter (e.g. "Diamonds" -> "D", "Spades" -> "S")
+function base_to_suit(base_suit)
+    -- Make sure we handle the case of an empty or nil string
+    if not base_suit or base_suit == "" then
+        return ""
+    end
+    -- Return just the first character
+    return base_suit:sub(1, 1)
+end
+
+
+--Function to load files from folder
 local mod_path = '' .. SMODS.current_mod.path
 local function load_folder(folder)
     local files = NFS.getDirectoryItems(mod_path .. folder)

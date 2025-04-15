@@ -161,6 +161,13 @@ return {
                     '{C:attention}Atium Cards',
                 },
             },
+            c_csmr_kandra = {
+                name = 'Kandra',
+                text = {
+                    'Create {C:attention}#1#{} copies of the last destroyed card',
+                    'with a random enhancement and a random seal',
+                },
+            },
         },
         Voucher={},
     },
