@@ -181,6 +181,11 @@ Reddit: [Profile](https://www.reddit.com/user/thehoidbringer/)
 
 Discord: moneymakerarson
 
-Join the discussion or follow along with the mod's progress on the Official Balatro Discord (Look for "BalatroXCosmere" in the modding forum): [Server](https://discord.gg/5hSWQwddg8)
+Join the discussion or follow along with the mod's progress on Discord:
+
+- Official Balatro Server Link: [Server](https://discord.gg/balatro)
+- Official Balatro Channel Link: [Channel](https://discord.com/channels/1116389027176787968/1354496708213473310)
+- Mod Discord Server: [Server](https://discord.gg/5KceFZQutu)
+ 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
