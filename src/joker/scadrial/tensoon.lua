@@ -30,7 +30,7 @@ SMODS.Joker {
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
                 card:juice_up()
                 return {
-                message = 'Upgraded!'
+                    message = 'Upgraded!'
                 }
             end
         end
