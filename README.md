@@ -20,6 +20,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#scadrial">Scadrial</a></li>
+    <li><a href="#nalthis">Nalthis</a></li>
     <li><a href="#credit">Credit</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -139,6 +140,17 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ### Lord Ruler (ART PENDING)
 - **Ability:** Weakens Scoring Joker effects by 25% for each hand played
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+# Nalthis
+
+## Jokers
+
+### God King (ART PENDING)
+- **Ability:** Converts any played Straight, Full House, or Five of a Kind into its Flush Variant and converts all scored cards into Wild Cards
+- **Rarity:** Rare
+- **Cost:** 8
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
