@@ -236,7 +236,7 @@ function SMODS.calculate_context(context, return_table)
     return base_calculate_context(context, return_table)
 end
 
--- Convert the 'value' (rank) into either a number string or a one-letter face value.
+-- Convert the 'value' (rank) into its one-character equivalent (e.g. "Ace" -> "A", "2" -> "2")
 function base_to_rank(base_rank)
     -- Map of face names to their one-letter equivalents
     local rankMap = {
@@ -245,21 +245,57 @@ function base_to_rank(base_rank)
         ["Queen"] = "Q",
         ["King"]  = "K",
     }
-    -- If it's in faceMap (i.e., a face card), use the mapped value
-    -- Otherwise, assume it's already a numeric string (like "2", "3", "10")
     return rankMap[base_rank] or base_rank
 end
 
 -- Convert the 'suit' into its first letter (e.g. "Diamonds" -> "D", "Spades" -> "S")
 function base_to_suit(base_suit)
-    -- Make sure we handle the case of an empty or nil string
     if not base_suit or base_suit == "" then
         return ""
     end
-    -- Return just the first character
     return base_suit:sub(1, 1)
 end
 
+--Function to modify Poker Hand
+local base_modify_hand = Blind.modify_hand
+function Blind:modify_hand(cards, poker_hands, text, mult, hand_chips)
+    local mult, hand_chips, modded = base_modify_hand(self, cards, poker_hands, text, mult, hand_chips)
+
+    if G.GAME.new_poker_hand then
+
+        G.GAME.hands[G.GAME.old_poker_hand].played = G.GAME.hands[G.GAME.old_poker_hand].played - 1
+        G.GAME.hands[G.GAME.old_poker_hand].played_this_round = G.GAME.hands[G.GAME.old_poker_hand].played_this_round - 1
+
+        G.GAME.hands[G.GAME.new_poker_hand].played = G.GAME.hands[G.GAME.new_poker_hand].played + 1
+        G.GAME.hands[G.GAME.new_poker_hand].played_this_round = G.GAME.hands[G.GAME.new_poker_hand].played_this_round + 1
+
+        G.GAME.last_hand_played = G.GAME.new_poker_hand
+        set_hand_usage(G.GAME.new_poker_hand)
+        G.GAME.hands[G.GAME.new_poker_hand].visible = true
+
+        if self.name == 'The Eye' then
+
+            if self.hands[G.GAME.old_poker_hand] then
+                self.hands[G.GAME.old_poker_hand] = false
+            end
+            self.hands[G.GAME.new_poker_hand] = true
+
+        elseif self.name == 'The Mouth' then
+
+            self.only_hand = G.GAME.new_poker_hand
+
+        end
+
+        mult = G.GAME.hands[G.GAME.new_poker_hand].mult
+        hand_chips = G.GAME.hands[G.GAME.new_poker_hand].chips
+        modded = false
+
+        G.GAME.new_poker_hand = false
+
+    end
+
+    return mult, hand_chips, modded
+end
 
 --Function to load files from folder
 local mod_path = '' .. SMODS.current_mod.path
@@ -271,7 +307,11 @@ local function load_folder(folder)
 end
 
 --File loading
+--Scadrial
 load_folder('src/joker/scadrial')
 load_folder('src/tarot/scadrial')
 load_folder('src/enhancement/scadrial')
 load_folder('src/blind/scadrial')
+
+--Nalthis
+load_folder('src/joker/nalthis')

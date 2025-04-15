@@ -128,7 +128,16 @@ return {
                     '#3# or more {C:attention}Enhanced Cards{} are scored',
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
                 }
-            }
+            },
+            j_csmr_godking = {
+                name = 'God King',
+                text = {
+                    'Turns any played {C:attention}Straight{}, {C:attention}Full House{},',
+                    'or {C:attention}Five of a Kind{} into its',
+                    '{C:attention}Flush Variant{} and converts all',
+                    'scored cards into {C:attention}Wild Cards'
+                }
+            },
         },
         Other={},
         Planet={},
