@@ -68,7 +68,7 @@ G.C.CSMR_PRESERVERS = HEX('000000')
 SMODS.Rarity{
   key = 'preserver',
   badge_colour = G.C.CSMR_PRESERVERS,
-  default_weight = 0.75,
+  default_weight = 0.25,
   pools = {['Joker'] = true},
 }
 
