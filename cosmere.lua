@@ -128,9 +128,6 @@ SMODS.current_mod.extra_tabs = function()
     }
 end
 
---Global variables
-G.destroyed_cards = {}
-
 --Functions
 --Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
 function Card:is_preservation()
@@ -226,7 +223,10 @@ local function capture_destroyed_card(context)
     if G.STAGE == G.STAGES.RUN and context.remove_playing_cards then
         for k, v in ipairs(context.removed) do
             local info = card_information(v, nil, G.playing_card)
-            table.insert(G.destroyed_cards, info)
+            if not G.GAME.destroyed_cards then
+                G.GAME.destroyed_cards = {}
+            end
+            table.insert(G.GAME.destroyed_cards, info)
         end
     end
 end

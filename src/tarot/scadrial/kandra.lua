@@ -17,13 +17,13 @@ SMODS.Consumable {
 		}
     end,
     can_use = function(self, card)
-		if #G.destroyed_cards == 0 then
+		if not G.GAME.destroyed_cards then
 			return false
 		end
 	    return true
 	end,
     use = function(self)
-        local card_info = G.destroyed_cards[#G.destroyed_cards]
+        local card_info = G.GAME.destroyed_cards[#G.GAME.destroyed_cards]
         local cen_pool = {}
         for k, v in pairs(G.P_CENTER_POOLS["Enhanced"]) do
             cen_pool[#cen_pool+1] = v
