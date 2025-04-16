@@ -9,12 +9,13 @@ SMODS.Joker {
 	discovered = true,
 	blueprint_compat = true,
 	eternal_compat = false,
-	config = { extra = { gold = 2, rounds = 8 } },
+	config = { extra = { gold = 2, life = 8, rounds = 1 } },
 	loc_vars = function(self, info_queue, card)
 		return {
-			vars = { 
-				card.ability.extra.gold, 
-				card.ability.extra.rounds 
+			vars = {
+				card.ability.extra.gold,
+				card.ability.extra.life,
+				card.ability.extra.rounds,
 			}
 		}
 	end,
@@ -22,8 +23,9 @@ SMODS.Joker {
 		if context.end_of_round and not context.blueprint and not context.repetition and not context.individual then
 			if card.ability.extra.rounds == 1 then
 				G.E_MANAGER:add_event(Event({
+					trigger = 'after',
+					delay = 0.5,
 					func = function()
-						play_sound('tarot1')
 						card.T.r = -0.2
 						card:juice_up(0.3, 0.4)
 						card.states.drag.is = true
@@ -33,20 +35,20 @@ SMODS.Joker {
 									G.jokers:remove_card(card)
 									card:remove()
 									card = nil
-								return true; end})) 
+								return true; end}))
 						return true
 					end
-				})) 
+				}))
 				return {
-					message = localize('k_eaten_ex'), --Message to be customized later
-					colour = G.C.FILTER
+					message = 'Ruined!',
+					colour = G.C.BLACK
 				}
 			else
 				card.ability.extra.rounds = card.ability.extra.rounds - 1
 			end
 		end
 		if context.individual and context.cardarea == G.play and context.scoring_hand then
-			if context.other_card:is_preservation() then 
+			if context.other_card:is_preservation() then
 				return {
 					dollars = card.ability.extra.gold
 				}

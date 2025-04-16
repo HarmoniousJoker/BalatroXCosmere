@@ -51,8 +51,9 @@ return {
                 name = 'Dockson',
                 text = {
                     'Earn {C:gold}$#1#{} per scored {C:attention}Preservation Card{},',
-                    'destroyed after #2# rounds',
-                    '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)'
+                    'destroyed after {C:attention}#2#{} rounds',
+                    '{C:inactive}(Rounds left: {C:attention}#3#{C:inactive})',
+                    '{C:inactive}({C:attention}Preservation Cards{C:inactive}: A, 2, 4, and 8)',
                 }
             },
             j_csmr_lestibournes = {
