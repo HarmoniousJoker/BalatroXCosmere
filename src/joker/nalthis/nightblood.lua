@@ -1,4 +1,4 @@
---Nightblood: Before scoring, debuff a played card randomly and gain 0.1x mult. Debuffed cards reset at end of Ante
+--Nightblood: Before scoring, debuff a played card randomly and gain 0.1x mult. Debuffed cards reset at end of Ante or when Joker is sold
 SMODS.Joker{
     key = 'nightblood',
     atlas = 'joker',
