@@ -157,6 +157,11 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Rarity:** Uncommon
 - **Cost:** 6
 
+### Nightblood (ART PENDING)
+- **Ability:** Before scoring, debuff a played card randomly and gain 0.1x mult. Debuffed cards reset at end of Ante or when Joker is sold
+- **Rarity:** Uncommon
+- **Cost:** 5
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Credit
