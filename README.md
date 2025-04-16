@@ -152,6 +152,11 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Rarity:** Rare
 - **Cost:** 8
 
+### Lightsong (ART PENDING)
+- **Ability:** Gives Mult equal to half of the sum of the total ranks of all Destroyed Cards
+- **Rarity:** Uncommon
+- **Cost:** 6
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Credit
