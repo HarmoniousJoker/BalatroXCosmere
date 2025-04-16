@@ -161,9 +161,9 @@ local base_calculate_joker = Card.calculate_joker
 function Card.calculate_joker(self,context)
 	local ret = base_calculate_joker(self, context)
 	if G.GAME.blind:get_type() == 'Boss' and G.GAME.round_resets.blind_choices.Boss == 'bl_csmr_lordruler' then
-        multiplier = G.GAME["LordRulerMultiplier"]
+        multiplier = G.GAME['LordRulerMultiplier']
 		if context.end_of_round then
-            G.GAME["LordRulerMultiplier"] = 1
+            G.GAME['LordRulerMultiplier'] = 1
 			return ret
 		end
 		if self.ability.name == 'Blueprint' or self.ability.name == 'Brainstorm' and not context.end_of_round then
@@ -236,34 +236,34 @@ function SMODS.calculate_context(context, return_table)
     return base_calculate_context(context, return_table)
 end
 
--- Convert the 'value' (rank) into its one-character equivalent (e.g. "Ace" -> "A", "2" -> "2")
+-- Convert the 'value' (rank) into its one-character equivalent (e.g. 'Ace' -> 'A', '2' -> '2')
 function base_to_letter_rank(base_rank)
     -- Map of face names to their one-letter equivalents
     local rank_letter = {
-        ["Ace"]   = "A",
-        ["Jack"]  = "J",
-        ["Queen"] = "Q",
-        ["King"]  = "K",
+        ['Ace']   = 'A',
+        ['Jack']  = 'J',
+        ['Queen'] = 'Q',
+        ['King']  = 'K',
     }
     return rank_letter[base_rank] or base_rank
 end
 
--- Convert the 'value' (rank) into its one-character equivalent (e.g. "Ace" -> 1, "2" -> 2)
+-- Convert the 'value' (rank) into its one-character equivalent (e.g. 'Ace' -> 1, '2' -> 2)
 function base_to_number_rank(base_rank)
     -- Map of face names to their one-letter equivalents
     local rank_letter = {
-        ["Ace"]   = 1,
-        ["Jack"]  = 10,
-        ["Queen"] = 10,
-        ["King"]  = 10,
+        ['Ace']   = 1,
+        ['Jack']  = 10,
+        ['Queen'] = 10,
+        ['King']  = 10,
     }
     return tonumber(rank_letter[base_rank]) or tonumber(base_rank)
 end
 
--- Convert the 'suit' into its first letter (e.g. "Diamonds" -> "D", "Spades" -> "S")
+-- Convert the 'suit' into its first letter (e.g. 'Diamonds' -> 'D', 'Spades' -> 'S')
 function base_to_suit(base_suit)
-    if not base_suit or base_suit == "" then
-        return ""
+    if not base_suit or base_suit == '' then
+        return ''
     end
     return base_suit:sub(1, 1)
 end
