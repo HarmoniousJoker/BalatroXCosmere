@@ -29,7 +29,7 @@ SMODS.Consumable {
             cen_pool[#cen_pool+1] = v
         end
         for i=1, self.config.copies do
-            local _rank = base_to_rank(card_info.base.value)
+            local _rank = base_to_letter_rank(card_info.base.value)
             local _suit = base_to_suit(card_info.base.suit)
             local _card = create_playing_card({
                 front = G.P_CARDS[_suit..'_'.._rank],
