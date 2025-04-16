@@ -162,6 +162,12 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Rarity:** Uncommon
 - **Cost:** 5
 
+### Vasher (ART PENDING)
+- **Ability:** Makes the first played card wild and polychrome, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
+- **Rarity:** Rare
+- **Cost:** 6
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Credit
