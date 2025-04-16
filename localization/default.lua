@@ -15,7 +15,7 @@ return {
             m_csmr_pewter = {
                 name = 'Pewter',
                 text = {
-                    'Always scores and {C:attention}Quadruples{}',
+                    'Always scores and {C:attention}Doubles{}',
                     'chips, starting with base chips,',
                     'destroyed after {C:attention}4{} uses',
                     '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)',
@@ -155,6 +155,15 @@ return {
                     'debuffed cards reset at end of Ante',
                     'or when Joker is sold',
                     '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)'
+                }
+            },
+            j_csmr_vasher = {
+                name = 'Vasher',
+                text = {
+                    'Makes the first played card wild and polychrome,',
+                    '1 in 2 chance of being destroyed after scoring,',
+                    'gains {C:mult}+#1#{} Mult per destroyed card',
+                    '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
                 }
             },
         },

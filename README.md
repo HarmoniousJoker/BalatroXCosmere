@@ -129,7 +129,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 ## Enhancements
 
 ### Pewter
-- **Ability:** Always scores and Quadruples chips, starting with base chips, destroyed after 4 uses
+- **Ability:** Always scores and Doubles chips, starting with base chips, destroyed after 4 uses
 
 ### Atium
 - **Ability:** Gives 1/8th of the sum of all base chips of remaining cards in deck

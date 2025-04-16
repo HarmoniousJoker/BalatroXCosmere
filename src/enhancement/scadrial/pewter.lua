@@ -1,4 +1,4 @@
---Pewter: Always scores and Quadruples chips, starting with base chips, destroyed after 4 uses
+--Pewter: Always scores and Doubles chips, starting with base chips, destroyed after 4 uses
 SMODS.Enhancement{
     key = "pewter",
     atlas = "scadrial_enhancement",
@@ -6,7 +6,7 @@ SMODS.Enhancement{
     discovered = true,
     always_scores = true,
     overrides_base_rank = false,
-    config = { extra = { xchips = 4, uses = 1, uses_left = 4, chips = 0, updated = false } },
+    config = { extra = { xchips = 2, uses = 0, uses_left = 4, chips = 0, updated = false } },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -30,12 +30,12 @@ SMODS.Enhancement{
                 chips = card.ability.extra.chips
             }
         end
-        if context.after and context.cardarea == G.play then
+        if context.final_scoring_step and context.cardarea == G.play then
             card.ability.extra.uses_left = card.ability.extra.uses_left - 1
             card.ability.extra.uses = card.ability.extra.uses + 1
             card.ability.extra.updated = false
         end
-        if context.destroy_card and card.ability.extra.uses_left <= 1  and context.cardarea ~= G.hand then
+        if context.destroy_card and card.ability.extra.uses_left == 0  and context.cardarea ~= G.hand then
             G.E_MANAGER:add_event(Event({
                 func = function()
                     card:start_dissolve({G.C.BLACK, G.C.RED, G.C.RED}, true, 5)
