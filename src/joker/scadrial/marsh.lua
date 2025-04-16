@@ -1,8 +1,8 @@
 --Marsh: Played cards that are not scored have an 4 in 16 chance of becoming Steel cards
 SMODS.Joker {
 	key = 'marsh',
-	atlas = 'joker',
-	pos = { x = 0, y = 0 },
+	atlas = 'scadrial_joker',
+	pos = { x = 5, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,
