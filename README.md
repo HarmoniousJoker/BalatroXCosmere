@@ -72,7 +72,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
 
-### Marsh (ART PENDING)
+### Marsh
 - **Ability:** Played cards that are not scored have an 4 in 16 chance of becoming Steel cards
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
