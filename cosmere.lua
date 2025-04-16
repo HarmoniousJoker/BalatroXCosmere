@@ -237,15 +237,27 @@ function SMODS.calculate_context(context, return_table)
 end
 
 -- Convert the 'value' (rank) into its one-character equivalent (e.g. "Ace" -> "A", "2" -> "2")
-function base_to_rank(base_rank)
+function base_to_letter_rank(base_rank)
     -- Map of face names to their one-letter equivalents
-    local rankMap = {
+    local rank_letter = {
         ["Ace"]   = "A",
         ["Jack"]  = "J",
         ["Queen"] = "Q",
         ["King"]  = "K",
     }
-    return rankMap[base_rank] or base_rank
+    return rank_letter[base_rank] or base_rank
+end
+
+-- Convert the 'value' (rank) into its one-character equivalent (e.g. "Ace" -> 1, "2" -> 2)
+function base_to_number_rank(base_rank)
+    -- Map of face names to their one-letter equivalents
+    local rank_letter = {
+        ["Ace"]   = 1,
+        ["Jack"]  = 10,
+        ["Queen"] = 10,
+        ["King"]  = 10,
+    }
+    return tonumber(rank_letter[base_rank]) or tonumber(base_rank)
 end
 
 -- Convert the 'suit' into its first letter (e.g. "Diamonds" -> "D", "Spades" -> "S")

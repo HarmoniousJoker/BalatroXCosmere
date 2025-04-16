@@ -138,6 +138,15 @@ return {
                     'scored cards into {C:attention}Wild Cards'
                 }
             },
+            j_csmr_lightsong = {
+                name = 'Lightsong',
+                text = {
+                    'Gives Mult equal to',
+                    'half of the sum of the total ranks',
+                    'of all {C:attention}Destroyed Cards',
+                    '{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)'
+                }
+            }
         },
         Other={},
         Planet={},
