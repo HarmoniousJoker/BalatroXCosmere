@@ -92,7 +92,7 @@ return {
                 name = 'Sazed',
                 text = {
                     '{C:green}Preserver{} Jokers',
-                    'each give {X:mult,C:white} X#1# {} Mult'
+                    'each give {X:mult,C:white}X#1#{} Mult'
                 }
             },
             j_csmr_hammond = {
@@ -146,7 +146,17 @@ return {
                     'of all {C:attention}Destroyed Cards',
                     '{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)'
                 }
-            }
+            },
+            j_csmr_nightblood = {
+                name = 'Nightblood',
+                text = {
+                    'Before scoring, debuff a played card randomly',
+                    'and gain {X:mult,C:white}X#1#{} Mult',
+                    'debuffed cards reset at end of Ante',
+                    'or when Joker is sold',
+                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)'
+                }
+            },
         },
         Other={},
         Planet={},
