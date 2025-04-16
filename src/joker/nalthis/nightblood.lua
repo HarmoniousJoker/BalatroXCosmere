@@ -52,5 +52,13 @@ SMODS.Joker{
             end
             card.ability.extra.debuffed_cards = {}
         end
+        if context.selling_card then
+            if context.card.config.center.key == 'j_csmr_nightblood' then
+                for k, v in ipairs(card.ability.extra.debuffed_cards) do
+                    v:set_debuff(false)
+                end
+                card.ability.extra.debuffed_cards = {}
+            end
+        end
     end
 }
