@@ -63,7 +63,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Cost:** 4
 
 ### Lestibournes
-- **Ability:** Upgrade Poker Hand every 8th time it is played
+- **Ability:** Upgrade Poker Hand every 4th time it is played
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
 
@@ -73,7 +73,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Cost:** 4
 
 ### Marsh
-- **Ability:** Played cards that are not scored have an 4 in 16 chance of becoming Steel cards
+- **Ability:** One unscored card has a 4 in 16 chance of becoming a Steel card
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
 
@@ -166,7 +166,6 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Ability:** Makes the first played card wild and polychrome, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
 - **Rarity:** Rare
 - **Cost:** 6
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

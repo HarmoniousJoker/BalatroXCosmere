@@ -1,4 +1,4 @@
---Marsh: Played cards that are not scored have an 4 in 16 chance of becoming Steel cards
+--Marsh: One unscored card has a 4 in 16 chance of becoming a Steel card
 SMODS.Joker {
 	key = 'marsh',
 	atlas = 'scadrial_joker',
@@ -10,15 +10,28 @@ SMODS.Joker {
 	blueprint_compat = true,
 	config = { extra = { odds = 4 } },
 	calculate = function(self, card, context)
-		if context.individual and context.cardarea == 'unscored' then
-			local upgraded_marsh = 0
-			if pseudorandom('marsh') < G.GAME.probabilities.normal/card.ability.extra.odds then
-				upgraded_marsh = upgraded_marsh + 1
-				context.other_card:set_ability(G.P_CENTERS.m_steel, nil, true)
+		if context.after then
+			local scored_lookup = {}
+			for _, v in ipairs(context.scoring_hand) do
+				scored_lookup[v] = true
+			end
+
+			local unscored_cards = {}
+			for _, v in ipairs(G.play.cards) do
+				if not scored_lookup[v] then
+					table.insert(unscored_cards, v)
+				end
+			end
+			if pseudorandom('marsh') < G.GAME.probabilities.normal / card.ability.extra.odds then
+				local steel_card = pseudorandom_element(unscored_cards, pseudoseed('marsh1'))
+				steel_card:set_ability(G.P_CENTERS.m_steel, nil, true)
 				return {
-					message = 'Upgraded!',
-					color = G.C.MULT,
-					message_card = card
+					message = 'Steeled!',
+					message_card = steel_card
+				}
+			else
+				return {
+					message = 'Raided!',
 				}
 			end
 		end

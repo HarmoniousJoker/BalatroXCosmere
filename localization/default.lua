@@ -74,9 +74,9 @@ return {
             j_csmr_marsh = {
                 name = 'Marsh',
                 text = {
-                    'Played cards that are not scored have',
+                    'One unscored card has a',
                     '{C:green}4 in 16{} chance of becoming',
-                    '{C:attention}Steel Cards{}'
+                    'a {C:attention}Steel Card{}'
                 }
             },
             j_csmr_tindwyl = {
