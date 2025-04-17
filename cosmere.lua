@@ -183,9 +183,26 @@ function Card.calculate_joker(self,context)
 		if ret.chip_mod then ret.chip_mod = ret.chip_mod * multiplier end
 		if ret.chips then ret.chips = ret.chips * multiplier end
 		return ret
-	else
+    end
+
+    if G.GAME.blind:get_type() == 'Boss' and G.GAME.round_resets.blind_choices.Boss == 'bl_csmr_denth' then
+        multiplier = self.ability.multiplier or 1
+        if not ret then return ret end
+
+        -- Mult
+        if ret.Xmult_mod then ret.Xmult_mod = ret.Xmult_mod * multiplier end
+        if ret.mult_mod then ret.mult_mod = ret.mult_mod * multiplier end
+        if ret.x_mult then ret.x_mult = ret.x_mult * multiplier end
+        if ret.h_mult then ret.h_mult = ret.h_mult * multiplier end
+        if ret.mult then ret.mult = ret.mult * multiplier end
+
+        -- Chips
+        if ret.chip_mod then ret.chip_mod = ret.chip_mod * multiplier end
+        if ret.chips then ret.chips = ret.chips * multiplier end
+        self.ability.multiplier = 1
         return ret
     end
+    return ret
 end
 
 --Function to store card information
@@ -327,3 +344,4 @@ load_folder('src/blind/scadrial')
 
 --Nalthis
 load_folder('src/joker/nalthis')
+load_folder('src/blind/nalthis')

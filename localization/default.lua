@@ -8,7 +8,15 @@ return {
                     'Weakens Scoring Jokers by 25%',
                     'for each hand played',
                 }
-            }
+            },
+            bl_csmr_denth = {
+                name = 'Denth',
+                text = {
+                    'Before scoring, randomly make a',
+                    'Joker give the opposite effect',
+                    'if it is Scoring'
+                }
+            },
         },
         Edition={},
         Enhanced={

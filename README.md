@@ -169,6 +169,13 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Blinds
+
+### Denth (ART PENDING)
+- **Ability:** Before scoring, randomly make a Joker give the opposite effect if it is Scoring
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 # Credit
 
 ### Development
