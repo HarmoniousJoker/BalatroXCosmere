@@ -1,3 +1,4 @@
+--Lord Ruler: Weakens Scoring Joker effects by 25% for each hand played
 SMODS.Blind{
     key = "lordruler",
     dollars = 5,
@@ -11,6 +12,6 @@ SMODS.Blind{
             G.GAME["LordRulerMultiplier"] = 1
         end
         G.GAME["LordRulerMultiplier"] = G.GAME["LordRulerMultiplier"] * 0.75
-        print('M:', G.GAME["LordRulerMultiplier"])
+        self:wiggle()
     end,
 }
