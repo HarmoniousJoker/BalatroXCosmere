@@ -37,7 +37,13 @@ return {
                     'base chips of remaining cards in deck',
                     '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)'
                 }
-            }
+            },
+            m_csmr_heightened = {
+                name = 'Heightened',
+                text = {
+                    'Card cannot be {C:attention}Debuffed',
+                }
+            },
         },
         Joker={
             j_csmr_kelsier = {

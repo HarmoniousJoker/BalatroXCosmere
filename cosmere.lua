@@ -344,4 +344,5 @@ load_folder('src/blind/scadrial')
 
 --Nalthis
 load_folder('src/joker/nalthis')
+load_folder('src/enhancement/nalthis')
 load_folder('src/blind/nalthis')
