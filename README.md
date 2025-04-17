@@ -89,7 +89,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Cost:** 6
 
 ### Hammond  (ART PENDING)
-- **Ability:** +4 Mult for each Pewter Drag Card in deck
+- **Ability:** +4 Mult for each Pewter Card in deck
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
 
@@ -116,7 +116,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Ability:** Select 2 cards, apply the modifications of the left card on the right card, destroy the left card
 
 ### Thug  (ART PENDING)
-- **Ability:** Enhances 2 selected cards to Pewter Drag Cards
+- **Ability:** Enhances 2 selected cards to Pewter Cards
 
 ### Seer (ART PENDING)
 - **Ability:** Enhances 2 selected cards to Atium Cards 
