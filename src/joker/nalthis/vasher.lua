@@ -51,15 +51,7 @@ SMODS.Joker{
             end
         end
         if context.destroy_card and context.destroy_card == context.scoring_hand[1] and card.ability.extra.destroy then
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after',
-                delay = 0.1,
-                func = function()
-                    context.scoring_hand[1]:start_dissolve()
-                    return true
-                end,
-                blocking = true
-            }))
+            card.ability.extra.destroy = false
             return {
                 message = 'Destroyed!',
                 remove = true
