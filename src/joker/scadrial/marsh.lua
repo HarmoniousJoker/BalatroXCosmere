@@ -22,17 +22,19 @@ SMODS.Joker {
 					table.insert(unscored_cards, v)
 				end
 			end
-			if pseudorandom('marsh') < G.GAME.probabilities.normal / card.ability.extra.odds then
-				local steel_card = pseudorandom_element(unscored_cards, pseudoseed('marsh1'))
-				steel_card:set_ability(G.P_CENTERS.m_steel, nil, true)
-				return {
-					message = 'Steeled!',
-					message_card = steel_card
-				}
-			else
-				return {
-					message = 'Raided!',
-				}
+			if #unscored_cards > 0 then
+				if pseudorandom('marsh') < G.GAME.probabilities.normal / card.ability.extra.odds then
+					local steel_card = pseudorandom_element(unscored_cards, pseudoseed('marsh1'))
+					steel_card:set_ability(G.P_CENTERS.m_steel, nil, true)
+					return {
+						message = 'Steeled!',
+						message_card = steel_card
+					}
+				else
+					return {
+						message = 'Raided!',
+					}
+				end
 			end
 		end
 	end
