@@ -9,7 +9,7 @@ SMODS.Joker {
 	discovered = true,
 	blueprint_compat = true,
 	eternal_compat = false,
-	config = { extra = { gold = 2, life = 8, rounds = 1 } },
+	config = { extra = { gold = 2, life = 8, rounds = 8 } },
 	loc_vars = function(self, info_queue, card)
 		return {
 			vars = {
