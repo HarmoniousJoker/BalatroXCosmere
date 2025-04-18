@@ -186,7 +186,7 @@ return {
             j_csmr_vasher = {
                 name = 'Vasher',
                 text = {
-                    'Makes the first played card wild and polychrome,',
+                    'Makes the first played card {C:attention}Polychrome{} and {C:attention}Heightened{},',
                     '1 in 2 chance of being destroyed after scoring,',
                     'gains {C:mult}+#1#{} Mult per destroyed card',
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
@@ -229,6 +229,14 @@ return {
                 text = {
                     'Create {C:attention}#1#{} copies of the last destroyed card',
                     'with a random enhancement and a random seal',
+                },
+            },
+            c_csmr_breath = {
+                name = 'Breath',
+                text = {
+                    'Enhances {C:attention}#1#{}',
+                    'selected cards to',
+                    '{C:attention}Heightened Cards',
                 },
             },
         },

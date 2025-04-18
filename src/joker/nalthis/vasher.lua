@@ -1,4 +1,4 @@
---Vasher: Makes the first played card wild and polychrome, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
+--Vasher: Makes the first played card Polychrome and Heightened, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
 SMODS.Joker{
     key = 'vasher',
 	atlas = 'joker',
@@ -21,7 +21,7 @@ SMODS.Joker{
         if context.before and context.scoring_hand then
             card.ability.extra.flag = true
             context.scoring_hand[1]:set_edition(card.ability.extra.edition)
-            context.scoring_hand[1]:set_ability(G.P_CENTERS.m_wild, nil, true)
+            context.scoring_hand[1]:set_ability(G.P_CENTERS.m_csmr_heightened, nil, true)
             return {
                 message = 'Awakened!',
                 message_card = context.scoring_hand[1]
