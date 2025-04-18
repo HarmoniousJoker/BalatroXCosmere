@@ -8,13 +8,33 @@ SMODS.Joker {
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
+	config = { extra = { rounds = 2, uses = 0, flag = false } },
+	loc_vars = function(self, info_queue, card)
+		return {
+			vars = {
+				card.ability.extra.rounds,
+				card.ability.extra.rounds - card.ability.extra.uses
+			}
+		}
+	end,
 	calculate = function(self, card, context)
-        if context.repetition and context.cardarea == G.play then    
+		if context.setting_blind then
+			card.ability.extra.flag = false
+		end
+        if context.repetition and context.cardarea == G.play then
 			if SMODS.has_enhancement(context.other_card, 'm_lucky') then
                     return {
                         repetitions = 1,
                     }
             end
         end
+		if context.end_of_round and not card.ability.extra.flag then
+			card.ability.extra.flag = true
+			card.ability.extra.uses = card.ability.extra.uses + 1
+			if card.ability.extra.uses == card.ability.extra.rounds then
+				SMODS.calculate_effect({message = 'Upgraded!'}, card)
+				transform_card(card, 'j_csmr_ladymistborn')
+			end
+		end
     end
 }

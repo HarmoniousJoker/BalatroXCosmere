@@ -58,9 +58,20 @@ return {
             j_csmr_vin = {
                 name = 'Vin',
 		        text = {
-                    'Retriggers all {C:attention}Lucky Cards{}'
+                    'Retriggers all {C:attention}Lucky Cards{},',
+                    'transforms into {C:attention}Lady Mistborn{}',
+                    'after {C:attention}#1#{} rounds',
+                    '{C:inactive}(Rounds left: {C:attention}#2#{C:inactive})',
 		        }
             },
+            j_csmr_ladymistborn = {
+                name = 'Lady Mistborn',
+                text = {
+                    'Preservation cards, before scoring,',
+                    'have a {C:green}4 in 16{} chance of turning',
+                    'into a {C:attention}Glass Card{}'
+                }
+		    },
             j_csmr_dockson = {
                 name = 'Dockson',
                 text = {

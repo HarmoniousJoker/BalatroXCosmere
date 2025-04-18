@@ -1,7 +1,10 @@
 --Optional features
 SMODS.optional_features = {
+    quantum_enhancements = true,
     cardareas = {
-        unscored=true
+        unscored=true,
+        discard = true,
+        deck = true
     }
 }
 
@@ -324,6 +327,36 @@ function Blind:modify_hand(cards, poker_hands, text, mult, hand_chips)
     end
 
     return mult, hand_chips, modded
+end
+
+--Function to transform a joker
+function transform_card(old_card, new_card)
+    G.E_MANAGER:add_event(Event({
+        trigger = "after",
+        delay = 0.15,
+        func = function()
+            old_card:flip()
+            return true
+        end,
+    }))
+    G.E_MANAGER:add_event(Event({
+        trigger = "after",
+        delay = 0.15,
+        func = function()
+            old_card:set_ability(G.P_CENTERS[new_card])
+            play_sound("card1")
+            old_card:juice_up(0.3, 0.3)
+            return true
+        end,
+    }))
+    G.E_MANAGER:add_event(Event({
+        trigger = "after",
+        delay = 0.15,
+        func = function()
+            old_card:flip()
+            return true
+        end,
+    }))
 end
 
 --Function to load files from folder
