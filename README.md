@@ -99,7 +99,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Cost:** 4
 
 ### Lady Mistborn
-- **Ability** Preservation cards, before scoring, have a 4 in 16 chance of turning into a Glass Card
+- **Ability:** Preservation cards, before scoring, have a 4 in 16 chance of turning into a Glass Card
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4 (only for sell value, ***cannot*** be bought from shop)
 
