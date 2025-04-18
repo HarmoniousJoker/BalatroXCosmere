@@ -35,7 +35,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ## Content Added
 
-<table border="2" cellpadding="5" cellspacing="0" width="100%">
+<table border="1" cellpadding="5" cellspacing="0" width="100%">
   <tbody>
     <!-- header row -->
     <tr align="center">
