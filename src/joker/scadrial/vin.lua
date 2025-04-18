@@ -1,4 +1,4 @@
---Vin: Retriggers all Lucky cards 
+--Vin: Retriggers all Lucky cards, transforms into Lady Mistborn after 8 rounds
 SMODS.Joker {
 	key = 'vin',
 	atlas = 'scadrial_joker',
@@ -8,7 +8,7 @@ SMODS.Joker {
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
-	config = { extra = { rounds = 2, uses = 0, flag = false } },
+	config = { extra = { rounds = 8, uses = 0, flag = false } },
 	loc_vars = function(self, info_queue, card)
 		return {
 			vars = {
