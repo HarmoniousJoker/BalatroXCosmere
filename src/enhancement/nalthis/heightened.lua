@@ -1,7 +1,7 @@
 --Heightened: Card cannot be debuffed
 SMODS.Enhancement{
     key = "heightened",
-    atlas = "scadrial_enhancement",
+    atlas = "scadrial_enhancement", -- to be changed
     pos = {x = 0, y = 0},
     discovered = true,
     always_scores = false,

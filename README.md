@@ -33,6 +33,40 @@
 
 This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
+## Content Added
+
+<table style="border:2px solid #333; border-collapse: collapse; width:100%;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #333; padding:5px; text-align:center">Scadrial</th>
+      <th style="border:1px solid #333; padding:5px; text-align:center">Nalthis</th>
+      <th style="border:1px solid #333; padding:5px; text-align:center">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Jokers: 13</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Jokers: 4</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">17</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Tarot Cards: 4</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Tarot Cards: 1</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">5</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Enhanced Cards: 2</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Enhanced Cards: 1</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">3</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Blinds: 1</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">Blinds: 1</td>
+      <td style="border:1px solid #333; padding:5px; text-align:center">2</td>
+    </tr>
+  </tbody>
+</table>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Installation
@@ -131,7 +165,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Enhancements
+## Enhanced Cards
 
 ### Pewter
 - **Ability:** Always scores and Doubles chips, starting with base chips, destroyed after 4 uses
@@ -168,15 +202,22 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Cost:** 5
 
 ### Vasher (ART PENDING)
-- **Ability:** Makes the first played card wild and polychrome, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
+- **Ability:** Makes the first played card Polychrome and Heightened, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
 - **Rarity:** Rare
 - **Cost:** 6
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Enhancements
+## Tarot Cards
 
-### Heightened
+### Breath (ART PENDING)
+- **Ability:** Enhances 2 selected cards to Heightened Cards
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Enhanced Cards
+
+### Heightened (ART PENDING)
 - **Ability:** Card cannot be Debuffed
 
 ## Blinds
