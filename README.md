@@ -36,33 +36,35 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 ## Content Added
 
 <table style="border:2px solid #333; border-collapse: collapse; width:100%;">
-  <thead>
-    <tr>
-      <th style="border:1px solid #333; padding:5px; text-align:center">Scadrial</th>
-      <th style="border:1px solid #333; padding:5px; text-align:center">Nalthis</th>
-      <th style="border:1px solid #333; padding:5px; text-align:center">Total</th>
-    </tr>
-  </thead>
   <tbody>
+      <tr>
+      <th style="font-weight: bold; border:1px solid #333; padding:5px; text-align:center">Scadrial</th>
+      <th style="font-weight: bold; border:1px solid #333; padding:5px; text-align:center">Nalthis</th>
+    </tr>
     <tr>
       <td style="border:1px solid #333; padding:5px; text-align:center">Jokers: 13</td>
       <td style="border:1px solid #333; padding:5px; text-align:center">Jokers: 4</td>
-      <td style="border:1px solid #333; padding:5px; text-align:center">17</td>
+      <td style="font-weight: bold; border:1px solid #333; padding:5px; text-align:center">17</td>
     </tr>
     <tr>
       <td style="border:1px solid #333; padding:5px; text-align:center">Tarot Cards: 4</td>
       <td style="border:1px solid #333; padding:5px; text-align:center">Tarot Cards: 1</td>
-      <td style="border:1px solid #333; padding:5px; text-align:center">5</td>
+      <td style="font-weight: bold; border:1px solid #333; padding:5px; text-align:center">5</td>
     </tr>
     <tr>
       <td style="border:1px solid #333; padding:5px; text-align:center">Enhanced Cards: 2</td>
       <td style="border:1px solid #333; padding:5px; text-align:center">Enhanced Cards: 1</td>
-      <td style="border:1px solid #333; padding:5px; text-align:center">3</td>
+      <td style="font-weight: bold; border:1px solid #333; padding:5px; text-align:center">3</td>
     </tr>
     <tr>
       <td style="border:1px solid #333; padding:5px; text-align:center">Blinds: 1</td>
       <td style="border:1px solid #333; padding:5px; text-align:center">Blinds: 1</td>
-      <td style="border:1px solid #333; padding:5px; text-align:center">2</td>
+      <td style="font-weight: bold; border:1px solid #333; padding:5px; text-align:center">2</td>
+    </tr>
+        <tr style="font-weight: bold; text-align: left;">
+      <th style="border:1px solid #333; padding:5px; text-align:center">20</th>
+      <th style="border:1px solid #333; padding:5px; text-align:center">7</th>
+      <th style="border:1px solid #333; padding:5px; text-align:center">27</th>
     </tr>
   </tbody>
 </table>
