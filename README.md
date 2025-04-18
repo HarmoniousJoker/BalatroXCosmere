@@ -40,6 +40,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
     <tr style="font-weight: bold">
       <td style="border:1px solid #333">Scadrial</th>
       <td style="border:1px solid #333">Nalthis</th>
+      <td style="border:1px solid #333"></th>
     </tr>
     <tr>
       <td style="border:1px solid #333">Jokers: 13</td>
