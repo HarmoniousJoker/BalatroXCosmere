@@ -35,40 +35,44 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ## Content Added
 
-<table style="border:2px solid #333; border-collapse: collapse; width:100%;">
-  <tbody style='text-align:center; padding:5px'>
-    <tr style="font-weight: bold">
-      <td style="border:1px solid #333">Scadrial</th>
-      <td style="border:1px solid #333">Nalthis</th>
-      <td style="border:1px solid #333"></th>
+<table border="2" cellpadding="5" cellspacing="0" width="100%">
+  <tbody>
+    <!-- header row -->
+    <tr align="center">
+      <th>Scadrial</th>
+      <th>Nalthis</th>
+      <th></th>
     </tr>
-    <tr>
-      <td style="border:1px solid #333">Jokers: 13</td>
-      <td style="border:1px solid #333">Jokers: 4</td>
-      <td style="font-weight: bold; border:1px solid #333">17</td>
+    <!-- data rows -->
+    <tr align="center">
+      <td>Jokers: 13</td>
+      <td>Jokers: 4</td>
+      <td><strong>17</strong></td>
     </tr>
-    <tr>
-      <td style="border:1px solid #333">Tarot Cards: 4</td>
-      <td style="border:1px solid #333">Tarot Cards: 1</td>
-      <td style="font-weight: bold; border:1px solid #333">5</td>
+    <tr align="center">
+      <td>Tarot Cards: 4</td>
+      <td>Tarot Cards: 1</td>
+      <td><strong>5</strong></td>
     </tr>
-    <tr>
-      <td style="border:1px solid #333">Enhanced Cards: 2</td>
-      <td style="border:1px solid #333">Enhanced Cards: 1</td>
-      <td style="font-weight: bold; border:1px solid #333">3</td>
+    <tr align="center">
+      <td>Enhanced Cards: 2</td>
+      <td>Enhanced Cards: 1</td>
+      <td><strong>3</strong></td>
     </tr>
-    <tr>
-      <td style="border:1px solid #333">Blinds: 1</td>
-      <td style="border:1px solid #333">Blinds: 1</td>
-      <td style="font-weight: bold; border:1px solid #333">2</td>
+    <tr align="center">
+      <td>Blinds: 1</td>
+      <td>Blinds: 1</td>
+      <td><strong>2</strong></td>
     </tr>
-    <tr style="font-weight: bold">
-      <td style="border:1px solid #333">20</th>
-      <td style="border:1px solid #333">7</th>
-      <td style="border:1px solid #333">27</th>
+    <!-- total row -->
+    <tr align="center">
+      <th>20</th>
+      <th>7</th>
+      <th>27</th>
     </tr>
   </tbody>
 </table>
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
