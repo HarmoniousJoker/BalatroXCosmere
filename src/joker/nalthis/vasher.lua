@@ -20,8 +20,7 @@ SMODS.Joker{
 	calculate = function(self, card, context)
         if context.before and context.scoring_hand and not context.blueprint then
             card.ability.extra.flag = true
-            context.scoring_hand[1]:set_edition(card.ability.extra.edition)
-            context.scoring_hand[1]:set_ability(G.P_CENTERS.m_csmr_heightened, nil, true)
+            transform_card(context.scoring_hand[1], 'm_csmr_heightened', card.ability.extra.edition)
             return {
                 message = 'Awakened!',
                 message_card = context.scoring_hand[1]

@@ -23,10 +23,10 @@ SMODS.Joker {
                 if SMODS.has_enhancement(context.full_hand[i], 'm_csmr_heightened') then
                     if pseudorandom('siri') < G.GAME.probabilities.normal/card.ability.extra.odds then
                         if i - 1 > 0 then
-                            context.full_hand[i-1]:set_ability(G.P_CENTERS.m_csmr_heightened, nil, true)
+                            transform_card(context.full_hand[i-1],'m_csmr_heightened')
                         end
                         if i + 1 <= #context.full_hand then
-                            context.full_hand[i+1]:set_ability(G.P_CENTERS.m_csmr_heightened, nil, true)
+                            transform_card(context.full_hand[i+1],'m_csmr_heightened')
                         end
                         i = i + 2
                     else

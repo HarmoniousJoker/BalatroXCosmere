@@ -2,7 +2,7 @@
 SMODS.Joker {
 	key = 'dockson',
 	atlas = 'scadrial_joker',
-	pos = { x = 3, y = 0 },
+	pos = { x = 4, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,

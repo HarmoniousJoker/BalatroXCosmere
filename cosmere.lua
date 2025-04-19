@@ -355,7 +355,7 @@ function Blind:modify_hand(cards, poker_hands, text, mult, hand_chips)
 end
 
 --Function to transform a joker
-function transform_card(old_card, new_card)
+function transform_card(old_card, center, edition)
     G.E_MANAGER:add_event(Event({
         trigger = "after",
         delay = 0.15,
@@ -368,7 +368,12 @@ function transform_card(old_card, new_card)
         trigger = "after",
         delay = 0.15,
         func = function()
-            old_card:set_ability(G.P_CENTERS[new_card])
+            if center then
+                old_card:set_ability(G.P_CENTERS[center])
+            end
+            if edition then
+                old_card:set_edition(edition)
+            end
             play_sound("card1")
             old_card:juice_up(0.3, 0.3)
             return true

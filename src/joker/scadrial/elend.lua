@@ -2,7 +2,7 @@
 SMODS.Joker {
 	key = 'elend',
 	atlas = 'scadrial_joker',
-	pos = { x = 4, y = 0 },
+	pos = { x = 5, y = 0 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,

@@ -25,7 +25,7 @@ SMODS.Consumable {
 	end,
     use = function(self, card)
         for k, v in ipairs(G.hand.highlighted) do
-            v:set_ability(G.P_CENTERS.m_csmr_atium, nil, true)
+            transform_card(v, 'm_csmr_atium')
         end
     end
 }

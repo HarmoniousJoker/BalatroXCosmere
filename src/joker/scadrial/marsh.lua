@@ -2,7 +2,7 @@
 SMODS.Joker {
 	key = 'marsh',
 	atlas = 'scadrial_joker',
-	pos = { x = 5, y = 0 },
+	pos = { x = 0, y = 1 },
 	rarity = 'csmr_preserver',
 	cost = 4,
 	unlocked = true,
@@ -25,7 +25,7 @@ SMODS.Joker {
 			if #unscored_cards > 0 then
 				if pseudorandom('marsh') < G.GAME.probabilities.normal / card.ability.extra.odds then
 					local steel_card = pseudorandom_element(unscored_cards, pseudoseed('marsh1'))
-					steel_card:set_ability(G.P_CENTERS.m_steel, nil, true)
+					transform_card(steel_card, 'm_steel')
 					return {
 						message = 'Steeled!',
 						message_card = steel_card

@@ -123,7 +123,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
 
-### Tindwyl (ART PENDING)
+### Tindwyl
 - **Ability:** Played Preservation Cards, when scored, have a 2 in 16 chance of becoming a King or Queen (This will not change the poker hand)
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
@@ -261,6 +261,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - https://www.instagram.com/lamaery_in_the_cosmere
 - https://www.deviantart.com/gisalmeida
 - https://www.deviantart.com/endoftheline
+- https://www.reddit.com/user/Future_Valkyrie/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

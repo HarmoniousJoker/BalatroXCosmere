@@ -32,8 +32,8 @@ SMODS.Joker {
 			card.ability.extra.flag = true
 			card.ability.extra.uses = card.ability.extra.uses + 1
 			if card.ability.extra.uses == card.ability.extra.rounds then
-				SMODS.calculate_effect({message = 'Upgraded!'}, card)
 				transform_card(card, 'j_csmr_ladymistborn')
+				SMODS.calculate_effect({message = 'Upgraded!'}, card)
 			end
 		end
     end
