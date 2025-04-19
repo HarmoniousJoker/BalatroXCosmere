@@ -16,12 +16,31 @@ SMODS.Consumable {
 	    return true
 	end,
     use = function(self, card)
-        local leftmost = G.hand.highlighted[1]
-        local rightmost = G.hand.highlighted[2]
+        for i=1, #G.hand.highlighted do
+            local percent = 1.15 - (i-0.999)/(#G.hand.highlighted-0.998)*0.3
+            G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.15,func = function() G.hand.highlighted[i]:flip();play_sound('card1', percent);G.hand.highlighted[i]:juice_up(0.3, 0.3);return true end }))
+        end
+        delay(0.2)
+        local rightmost = G.hand.highlighted[1]
         for i=1, #G.hand.highlighted do if G.hand.highlighted[i].T.x > rightmost.T.x then rightmost = G.hand.highlighted[i] end end
-        modify_card(leftmost, rightmost)
-        G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
-            leftmost:start_dissolve()
-            return true end }))
-        end,
+        for i=1, #G.hand.highlighted do
+            G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
+                if G.hand.highlighted[i] ~= rightmost then
+                    modify_card(G.hand.highlighted[i], rightmost)
+                end
+                return true end }))
+        end
+        for i=1, #G.hand.highlighted do
+            local percent = 0.85 + (i-0.999)/(#G.hand.highlighted-0.998)*0.3
+            G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.15,func = function() G.hand.highlighted[i]:flip();play_sound('tarot2', percent, 0.6);G.hand.highlighted[i]:juice_up(0.3, 0.3);return true end }))
+        end
+        delay(0.5)
+        for i=1, #G.hand.highlighted do
+            if G.hand.highlighted[i] ~= rightmost then
+                G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.15,func = function() G.hand.highlighted[i]:start_dissolve(); return true end }))
+            end
+        end
+        G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.2,func = function() G.hand:unhighlight_all(); return true end }))
+        delay(0.5)
+    end,
 }
