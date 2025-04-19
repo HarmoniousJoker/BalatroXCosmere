@@ -18,7 +18,7 @@ SMODS.Joker{
 		}
     end,
 	calculate = function(self, card, context)
-        if context.before and context.scoring_hand then
+        if context.before and context.scoring_hand and not context.blueprint then
             card.ability.extra.flag = true
             context.scoring_hand[1]:set_edition(card.ability.extra.edition)
             context.scoring_hand[1]:set_ability(G.P_CENTERS.m_csmr_heightened, nil, true)
@@ -32,7 +32,7 @@ SMODS.Joker{
                 mult = card.ability.extra.mult
             }
         end
-        if context.final_scoring_step then
+        if context.final_scoring_step and not context.blueprint then
             if context.scoring_hand[1] then
                 if pseudorandom('vasher') < G.GAME.probabilities.normal / card.ability.extra.odds and card.ability.extra.flag then
                     card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
@@ -50,7 +50,7 @@ SMODS.Joker{
                 end
             end
         end
-        if context.destroy_card and context.destroy_card == context.scoring_hand[1] and card.ability.extra.destroy then
+        if context.destroy_card and context.destroy_card == context.scoring_hand[1] and card.ability.extra.destroy and not context.blueprint then
             card.ability.extra.destroy = false
             return {
                 message = 'Destroyed!',

@@ -19,15 +19,9 @@ SMODS.Consumable {
         local leftmost = G.hand.highlighted[1]
         local rightmost = G.hand.highlighted[2]
         for i=1, #G.hand.highlighted do if G.hand.highlighted[i].T.x > rightmost.T.x then rightmost = G.hand.highlighted[i] end end
-        for i=1, #G.hand.highlighted do
-            G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
-                if G.hand.highlighted[i] ~= rightmost then
-                    modify_card(G.hand.highlighted[i], rightmost)
-                end
-                return true end }))
+        modify_card(leftmost, rightmost)
         G.E_MANAGER:add_event(Event({trigger = 'after',delay = 0.1,func = function()
             leftmost:start_dissolve()
             return true end }))
-        end
-    end,
+        end,
 }
