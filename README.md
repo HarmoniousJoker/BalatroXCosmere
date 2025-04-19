@@ -46,8 +46,8 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
     <!-- data rows -->
     <tr align="center">
       <td>Jokers: 13</td>
-      <td>Jokers: 4</td>
-      <td><strong>17</strong></td>
+      <td>Jokers: 5</td>
+      <td><strong>18</strong></td>
     </tr>
     <tr align="center">
       <td>Tarot Cards: 4</td>
@@ -67,8 +67,8 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
     <!-- total row -->
     <tr align="center">
       <th>20</th>
-      <th>7</th>
-      <th>27</th>
+      <th>8</th>
+      <th>28</th>
     </tr>
   </tbody>
 </table>
@@ -212,6 +212,11 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Ability:** Makes the first played card Polychrome and Heightened, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
 - **Rarity:** Rare
 - **Cost:** 6
+
+### Siri (ART PENDING) 
+- **Ability:** Each played Heightened Card, before scoring, has a 1 in 5 chance of making the cards around it Heightened
+- **Rarity:** Uncommon
+- **Cost:** 4
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

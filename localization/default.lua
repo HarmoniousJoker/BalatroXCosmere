@@ -192,6 +192,14 @@ return {
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
                 }
             },
+            j_csmr_siri = {
+                name = 'Siri',
+                text = {
+                    'Each played {C:attention}Heightened Card{}, before scoring,',
+                    'has a {C:green}1 in 5{} chance of making',
+                    'cards around it {C:attention}Heightened'
+                }
+            },
         },
         Other={},
         Planet={},
