@@ -163,6 +163,31 @@ end
 local base_calculate_joker = Card.calculate_joker
 function Card.calculate_joker(self,context)
 	local ret = base_calculate_joker(self, context)
+    if context.joker_main then
+        if self.force_trigger then
+            self.force_trigger = false
+            if self.ability.t_chips > 0 then
+                return {
+                    message = localize{type='variable',key='a_chips',vars={self.ability.t_chips}},
+                    chip_mod = self.ability.t_chips
+                }
+            end
+            if self.ability.t_mult > 0 then
+                return {
+                    message = localize{type='variable',key='a_mult',vars={self.ability.t_mult}},
+                    mult_mod = self.ability.t_mult
+                }
+            end
+            if self.ability.Xmult > 0 then
+                return {
+                    message = localize{type='variable',key='a_xmult',vars={self.ability.x_mult}},
+                    colour = G.C.RED,
+                    Xmult_mod = self.ability.x_mult
+                }
+            end
+        end
+    end
+
 	if G.GAME.blind:get_type() == 'Boss' and G.GAME.round_resets.blind_choices.Boss == 'bl_csmr_lordruler' then
         multiplier = G.GAME['LordRulerMultiplier']
 		if context.end_of_round then
