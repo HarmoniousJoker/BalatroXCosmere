@@ -200,6 +200,13 @@ return {
                     'cards around it {C:attention}Heightened'
                 }
             },
+            j_csmr_vivenna = {
+                name = 'Vivenna',
+                text = {
+                    'This Joker gives {C:mult}+#1#',
+                    'Mult for each {C:attention}Unscored Card{}'
+                }
+            }
         },
         Other={},
         Planet={},
