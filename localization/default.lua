@@ -187,7 +187,7 @@ return {
                 name = 'Vasher',
                 text = {
                     'Makes the first played card {C:attention}Polychrome{} and {C:attention}Heightened{},',
-                    '1 in 2 chance of being destroyed after scoring,',
+                    '{C:green}1 in 2{} chance of being destroyed after scoring,',
                     'gains {C:mult}+#1#{} Mult per destroyed card',
                     '{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)'
                 }
