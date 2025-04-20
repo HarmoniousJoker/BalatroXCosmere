@@ -37,42 +37,44 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 <table border="1" cellpadding="5" cellspacing="0" width="100%">
   <tbody>
-    <!-- header row -->
     <tr align="center">
+      <th>Category</th>
       <th>Scadrial</th>
       <th>Nalthis</th>
-      <th></th>
+      <th>Total</th>
     </tr>
-    <!-- data rows -->
     <tr align="center">
-      <td>Jokers: 13</td>
-      <td>Jokers: 6</td>
+      <td>Jokers</td>
+      <td>13</td>
+      <td>6</td>
       <td><strong>19</strong></td>
     </tr>
     <tr align="center">
-      <td>Tarot Cards: 4</td>
-      <td>Tarot Cards: 1</td>
+      <td>Tarot Cards</td>
+      <td>4</td>
+      <td>1</td>
       <td><strong>5</strong></td>
     </tr>
     <tr align="center">
-      <td>Enhanced Cards: 2</td>
-      <td>Enhanced Cards: 1</td>
+      <td>Enhanced Cards</td>
+      <td>2</td>
+      <td>1</td>
       <td><strong>3</strong></td>
     </tr>
     <tr align="center">
-      <td>Blinds: 1</td>
-      <td>Blinds: 1</td>
+      <td>Blinds</td>
+      <td>1</td>
+      <td>1</td>
       <td><strong>2</strong></td>
     </tr>
-    <!-- total row -->
     <tr align="center">
+      <th>Total</th>
       <th>20</th>
       <th>9</th>
       <th>29</th>
     </tr>
   </tbody>
 </table>
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
