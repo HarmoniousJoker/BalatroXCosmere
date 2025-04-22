@@ -17,7 +17,7 @@ SMODS.Consumable {
 		}
     end,
     can_use = function(self, card)
-		if not G.GAME.destroyed_cards then
+		if not G.GAME.destroyed_cards or #G.hand.cards < 1 then
 			return false
 		end
 	    return true
