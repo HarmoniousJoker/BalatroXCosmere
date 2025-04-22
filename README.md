@@ -236,7 +236,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ## Enhanced Cards
 
-### Heightened (ART PENDING)
+### Heightened
 - **Ability:** Card cannot be Debuffed
 
 ## Blinds

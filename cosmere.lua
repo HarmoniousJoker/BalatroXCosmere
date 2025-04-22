@@ -30,6 +30,13 @@ SMODS.Atlas {
 	py = 95
 }
 
+SMODS.Atlas {
+	key = 'nalthis_enhancement',
+	path = 'nalthis_enhancement.png',
+	px = 71,
+	py = 95
+}
+
 --Placeholder Atlases
 SMODS.Atlas {
     key = 'joker',
