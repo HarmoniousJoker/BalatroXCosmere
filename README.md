@@ -152,7 +152,7 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 - **Cost:** 6
 
 ### TenSoon  (ART PENDING)
-- **Ability:** This Joker gains +8 mult when 3 or more Enhanced Cards are scored
+- **Ability:** Copies the ability of a random joker each round
 - **Rarity:** Preserver (Uncommon)
 - **Cost:** 4
 
