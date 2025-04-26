@@ -361,7 +361,7 @@ function Blind:modify_hand(cards, poker_hands, text, mult, hand_chips)
     return mult, hand_chips, modded
 end
 
---Function to transform a joker
+--Function to transform a card
 function transform_card(old_card, center, edition)
     G.E_MANAGER:add_event(Event({
         trigger = "after",
