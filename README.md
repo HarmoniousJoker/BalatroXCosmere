@@ -90,104 +90,78 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ## Jokers
 
-### Kelsier
-- **Ability:** Gains 20 Chips, when 3 or more face cards are discarded at the same time
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Kelsier (Preserver)
+Gain 20 Chips when 3 or more face cards are discarded at the same time.
 
-### Vin
-- **Ability:** Retriggers all Lucky cards, transforms into [Lady Mistborn](#lady-mistborn) after 8 rounds
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Vin (Preserver)
+Retrigger all Lucky cards. After 8 rounds, transform into [Lady Mistborn](#lady-mistborn).
 
-### Lady Mistborn
-- **Ability:** Preservation cards, before scoring, have a 4 in 16 chance of turning into a Glass Card
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4 (only for sell value, ***cannot*** be bought from shop)
+### Lady Mistborn (Preserver)
+Before scoring, Preservation cards have a 4-in-16 chance to become a Glass Card.
 
-### Dockson
-- **Ability:** Earn $2 per scored preservation numbers, dies after 8 rounds
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Dockson (Preserver)
+Earn $2 per scored Preservation number. Dies after 8 rounds.
 
-### Lestibournes
-- **Ability:** Upgrade Poker Hand every 4th time it is played
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Lestibournes (Preserver)
+Upgrade Poker Hand every 4th time it is played.
 
-### Elend
-- **Ability:** 4 in 16 chance of gaining +2 mult per scored face card
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Elend (Preserver)
+4-in-16 chance to gain +2 Mult per scored face card.
 
-### Marsh
-- **Ability:** One unscored card has a 4 in 16 chance of becoming a Steel card
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Marsh (Preserver)
+One unscored card has a 4-in-16 chance to become a Steel Card.
 
-### Tindwyl
-- **Ability:** Played Preservation Cards, when scored, have a 2 in 16 chance of becoming a King or Queen (This will not change the poker hand)
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Tindwyl (Preserver)
+Played Preservation cards, when scored, have a 2-in-16 chance to become a King or Queen (does not change the Poker Hand).
 
-### Sazed (ART PENDING)
+### Sazed (Preserver) (ART PENDING)
+Each Preserver Joker grants ×1 Mult.
 
-- **Ability:** Preserver Jokers each give X1 Mult
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 6
+### Hammond (Preserver) (ART PENDING)
+Gain +4 Mult for each Pewter Card in your deck.
 
-### Hammond  (ART PENDING)
-- **Ability:** +4 Mult for each Pewter Card in deck
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
+### Cladent (Preserver) (ART PENDING)
+2-in-16 chance to disable the Boss Blind. Chance doubles each time it is not disabled, resetting after a successful disable.
 
-### Cladent (ART PENDING)
-- **Ability:** 2 in 16 chance of disabling Boss Blind. Chances are doubled each time Boss Blind is not disabled, resets after a successful disable
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 6
+### Edgard (Preserver) (ART PENDING)
+Sell this Joker to immediately gain 75% of the required Chips for the current Blind.
 
-### Edgard (ART PENDING)
-- **Ability:** Sell this Joker to immediately gain 75% of required chips for this Blind
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 6
+### TenSoon (Preserver) (ART PENDING)
+Copy the ability of a random Joker each round.
 
-### TenSoon  (ART PENDING)
-- **Ability:** Copies the ability of a random joker each round
-- **Rarity:** Preserver (Uncommon)
-- **Cost:** 4
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Tarot Cards
 
 ### Spike (ART PENDING)
-- **Ability:** Select 2 cards, apply the modifications of the left card on the right card, destroy the left card
+Select 2 cards. Apply the modifications of the left card onto the right card, then destroy the left card.
 
-### Thug  (ART PENDING)
-- **Ability:** Enhances 2 selected cards to Pewter Cards
+### Thug (ART PENDING)
+Enhance 2 selected cards into Pewter Cards.
 
 ### Seer (ART PENDING)
-- **Ability:** Enhances 2 selected cards to Atium Cards 
+Enhance 2 selected cards into Atium Cards.
 
 ### Kandra (ART PENDING)
-- **Ability:** Create 2 copies of the last destroyed card with a random enhancement and seal
+Create 2 copies of the last destroyed card with a random Enhancement and Seal.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Enhanced Cards
 
 ### Pewter
-- **Ability:** Always scores and Doubles chips, starting with base chips, destroyed after 4 uses
+Always scores and doubles Chips, starting with base Chips. Destroyed after 4 uses.
 
 ### Atium
-- **Ability:** Gives 1/8th of the sum of all base chips of remaining cards in deck
+Gives 1/8th of the sum of all base Chips of remaining cards in the deck.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Blinds
 
 ### Lord Ruler (ART PENDING)
-- **Ability:** Weakens Scoring Joker effects by 25% for each hand played
+Weaken Scoring Joker effects by 25% for each hand played.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -195,56 +169,44 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ## Jokers
 
-### God King (ART PENDING)
-- **Ability:** Converts any played Straight, Full House, or Five of a Kind into its Flush Variant and converts all scored cards into Wild Cards
-- **Rarity:** Rare
-- **Cost:** 8
+### God King (Rare) (ART PENDING)
+Convert any played Straight, Full House, or Five of a Kind into its Flush variant. Convert all scored cards into Wild Cards.
 
-### Lightsong (ART PENDING)
-- **Ability:** Gives Mult equal to half of the sum of the total ranks of all Destroyed Cards
-- **Rarity:** Uncommon
-- **Cost:** 6
+### Lightsong (Uncommon) (ART PENDING)
+Grant Mult equal to half of the sum of the total ranks of all destroyed cards.
 
-### Nightblood (ART PENDING)
-- **Ability:** Before scoring, debuff a played card randomly and gain 0.1x mult. Debuffed cards reset at end of Ante or when Joker is sold
-- **Rarity:** Uncommon
-- **Cost:** 5
+### Nightblood (Uncommon) (ART PENDING)
+Before scoring, debuff a played card randomly and gain +0.1× Mult. Debuffed cards reset at the end of the Ante or when this Joker is sold.
 
-### Vasher (ART PENDING)
-- **Ability:** Makes the first played card Polychrome and Heightened, 1 in 2 chance of being destroyed after scoring, gains 5 mult per destroyed card
-- **Rarity:** Rare
-- **Cost:** 6
+### Vasher (Rare) (ART PENDING)
+Make the first played card Polychrome and Heightened. 1-in-2 chance of being destroyed after scoring. Gain +5 Mult per destroyed card.
 
-### Siri (ART PENDING) 
-- **Ability:** Each played Heightened Card, before scoring, has a 1 in 5 chance of making the cards around it Heightened
-- **Rarity:** Uncommon
-- **Cost:** 4
+### Siri (Uncommon) (ART PENDING)
+Each played Heightened card, before scoring, has a 1-in-5 chance to Heighten adjacent cards.
 
-### Vivenna (ART PENDING)
-- **Ability:** This Joker gives +5 mult for each Unscored Card
-- **Rarity:** Common
-- **Cost:** 4
+### Vivenna (Common) (ART PENDING)
+Gain +5 Mult for each unscored card.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Tarot Cards
 
 ### Breath (ART PENDING)
-- **Ability:** Enhances 2 selected cards to Heightened Cards
+Enhances 2 selected cards to Heightened Cards.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Enhanced Cards
 
 ### Heightened
-- **Ability:** Card cannot be Debuffed
+Card cannot be Debuffed.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Blinds
 
 ### Denth (ART PENDING)
-- **Ability:** Before scoring, randomly make a Joker give the opposite effect if it is Scoring
+Before scoring, randomly make a Joker give the opposite effect if it is Scoring.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
