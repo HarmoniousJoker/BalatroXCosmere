@@ -225,6 +225,7 @@ Before scoring, randomly make a Joker give the opposite effect if it is Scoring.
 - https://www.instagram.com/jessiochse
 - https://www.instagram.com/lazifyre/
 - https://www.instagram.com/lamaery_in_the_cosmere
+- https://www.instagram.com/dealuna.art/
 - https://www.deviantart.com/gisalmeida
 - https://www.deviantart.com/endoftheline
 - https://www.reddit.com/user/Future_Valkyrie/
