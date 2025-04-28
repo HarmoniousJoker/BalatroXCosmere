@@ -12,6 +12,12 @@ SMODS.Blind{
             G.GAME["LordRulerMultiplier"] = 1
         end
         G.GAME["LordRulerMultiplier"] = G.GAME["LordRulerMultiplier"] * 0.75
-        self:wiggle()
     end,
+    calculate = function(self, blind, context)
+        if context.before then
+            G.E_MANAGER:add_event(Event({func = function()
+                blind:wiggle()
+                return true end }))
+        end
+    end
 }
