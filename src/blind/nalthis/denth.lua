@@ -4,7 +4,7 @@ SMODS.Blind{
     dollars = 5,
     mult = 1.5,
     boss_colour = G.C.BLACK,
-    --atlas = 'scadrial',
+    --atlas = 'nalthis',
     boss = {min = 4, max = 10},
     pos = { x = 0, y = 30},
     press_play = function(self)
