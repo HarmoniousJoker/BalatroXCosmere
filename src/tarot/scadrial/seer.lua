@@ -11,6 +11,7 @@ SMODS.Consumable {
     discovered = true,
     unlocked = true,
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_atium
 		return {
 			vars = {
 				card.ability.max_highlighted

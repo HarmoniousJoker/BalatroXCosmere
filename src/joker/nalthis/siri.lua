@@ -11,6 +11,7 @@ SMODS.Joker {
     enhancement_gate = 'm_csmr_heightened',
 	config = { extra = { odds = 3 } },
 	loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_heightened
 		return {
 			vars = {
 				card.ability.extra.odds,

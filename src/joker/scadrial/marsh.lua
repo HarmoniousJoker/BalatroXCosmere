@@ -9,6 +9,9 @@ SMODS.Joker {
 	discovered = true,
 	blueprint_compat = true,
 	config = { extra = { odds = 4 } },
+	loc_vars = function(self, info_queue, card)
+		info_queue[#info_queue+1] = G.P_CENTERS.m_steel
+	end,
 	calculate = function(self, card, context)
 		if context.after then
 			local scored_lookup = {}

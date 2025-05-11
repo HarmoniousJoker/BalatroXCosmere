@@ -10,6 +10,8 @@ SMODS.Joker{
 	blueprint_compat = true,
 	config = { extra = { mult = 0, mult_mod = 5, odds = 2, edition = {polychrome = true}, destroy = false, flag = false } },
 	loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_heightened
+        info_queue[#info_queue+1] = G.P_CENTERS.e_polychrome
 		return {
 			vars = {
 				card.ability.extra.mult_mod,

@@ -14,6 +14,9 @@ SMODS.Joker {
 	discovered = true,
 	blueprint_compat = false,
 	config = { extra = { odds = 4 } },
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = G.P_CENTERS.m_glass
+    end,
 	calculate = function(self, card, context)
 		if context.before and context.cardarea == G.jokers and not context.blueprint then
             for k, v in ipairs(context.scoring_hand) do

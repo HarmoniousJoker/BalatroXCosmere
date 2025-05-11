@@ -11,6 +11,7 @@ SMODS.Joker {
 	enhancement_gate = 'm_lucky',
 	config = { extra = { rounds = 1, uses = 0, flag = false } },
 	loc_vars = function(self, info_queue, card)
+		info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_lucky
 		return {
 			vars = {
 				card.ability.extra.rounds,

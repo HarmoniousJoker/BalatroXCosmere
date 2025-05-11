@@ -11,6 +11,7 @@ SMODS.Joker {
 	enhancement_gate = 'm_csmr_pewter',
 	config = { extra = { mult_mod = 4, pewter_tally = 0 } },
 	loc_vars = function(self, info_queue, card)
+		info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_pewter
 		return { 
 			vars = { 
 				card.ability.extra.mult_mod,
