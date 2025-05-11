@@ -223,7 +223,7 @@ Before scoring, randomly make a Joker give the opposite effect if it is Scoring.
 
 ### Programming Help
 
-Bepis, Icyethics, Victin, N', Mysthaps, etc.
+Bepis, Icyethics, Victin, N', Mysthaps, Catbot etc.
 
 ### Original Art
 - https://www.instagram.com/jessiochse
