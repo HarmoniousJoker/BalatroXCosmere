@@ -8,7 +8,8 @@ SMODS.Joker {
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
-	config = { extra = { rounds = 8, uses = 0, flag = false } },
+	enhancement_gate = 'm_lucky',
+	config = { extra = { rounds = 1, uses = 0, flag = false } },
 	loc_vars = function(self, info_queue, card)
 		return {
 			vars = {
@@ -28,7 +29,7 @@ SMODS.Joker {
                     }
             end
         end
-		if context.end_of_round and not card.ability.extra.flag then
+		if context.end_of_round and not card.ability.extra.flag and config.evolution_enabled then
 			card.ability.extra.flag = true
 			card.ability.extra.uses = card.ability.extra.uses + 1
 			if card.ability.extra.uses == card.ability.extra.rounds then

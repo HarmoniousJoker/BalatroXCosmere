@@ -8,6 +8,7 @@ SMODS.Joker {
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
+	enhancement_gate = 'm_csmr_pewter',
 	config = { extra = { mult_mod = 4, pewter_tally = 0 } },
 	loc_vars = function(self, info_queue, card)
 		return { 
