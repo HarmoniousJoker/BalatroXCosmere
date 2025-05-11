@@ -267,7 +267,9 @@ return {
         dictionary={
             k_csmr_preserver = {'Preserver'},
             k_csmr_inactive = {'Inactive'},
-            k_csmr_copy = {'Copied!'}
+            k_csmr_copy = {'Copied!'},
+            k_csmr_config_restart = "Requires Restart",
+            k_csmr_config_evolution = "Joker Evolution",
         },
         high_scores={},
         labels={},

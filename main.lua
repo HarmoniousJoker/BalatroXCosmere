@@ -138,6 +138,44 @@ SMODS.current_mod.extra_tabs = function()
     }
 end
 
+config = SMODS.current_mod.config
+
+SMODS.current_mod.config_tab = function()
+    return {
+        n = G.UIT.ROOT,
+        config = {align = "cm", padding = 0.05, emboss = 0.05, r = 0.1, colour = G.C.BLACK},
+        nodes = {
+            {
+                n = G.UIT.R,
+                config = {align = "cm", minh = 1},
+                nodes = {
+                    {
+                        n = G.UIT.T,
+                        config = {text = localize("k_csmr_config_restart"), colour = G.C.RED, scale = 0.5}
+                    }
+                }
+            },
+            {
+                n = G.UIT.R,
+                config = {align = "cm", padding = 0.01},
+                nodes = {
+                    {
+                        n = G.UIT.C,
+                        config = {align = "cm", padding = 0.01},
+                        nodes = {
+                            create_toggle {
+                                label = localize("k_csmr_config_evolution"),
+                                ref_table = config,
+                                ref_value = "evolution_enabled"
+                            },
+                        }
+                    },
+                }
+            }
+        }
+    }
+end
+
 --Functions
 --Function to check if Aces, 2s, 4,s and 8s appear in played hand/discard
 function Card:is_preservation()
