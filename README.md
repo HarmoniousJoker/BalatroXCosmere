@@ -221,6 +221,10 @@ Before scoring, randomly make a Joker give the opposite effect if it is Scoring.
 - Aakankshy
 - Hollow
 
+### Programming Help
+
+Bepis, Icyethics, Victin, N', Mysthaps, etc.
+
 ### Original Art
 - https://www.instagram.com/jessiochse
 - https://www.instagram.com/lazifyre/
