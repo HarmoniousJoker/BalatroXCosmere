@@ -1,4 +1,3 @@
---Code Credit: https://github.com/BustyCatbot/AetherJokers/
 --God King: Converts any played Straight, Full House, or Five of a Kind into its Flush Variant and converts all scored cards into Wild Cards
 SMODS.Joker {
 	key = 'godking',

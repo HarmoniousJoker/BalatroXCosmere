@@ -228,9 +228,10 @@ Including but not limited to:
 - Bepis
 - Icyethics
 - Victin 
-- N' 
+- nh6574
 - Mysthaps 
 - Catbot
+- somethingcom515
 
 ### Original Art
 - https://www.instagram.com/jessiochse
