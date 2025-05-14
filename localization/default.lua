@@ -101,7 +101,7 @@ return {
                 name = 'Marsh',
                 text = {
                     'One unscored card has a',
-                    '{C:green}4 in 16{} chance of becoming',
+                    '{C:green}8 in 16{} chance of becoming',
                     'a {C:attention}Steel Card{}'
                 }
             },

@@ -1,16 +1,19 @@
---Marsh: One unscored card has a 4 in 16 chance of becoming a Steel card
+--Marsh: One unscored card has a 8 in 16 chance of becoming a Steel card
 SMODS.Joker {
 	key = 'marsh',
 	atlas = 'scadrial_joker',
 	pos = { x = 0, y = 1 },
-	rarity = 'csmr_preserver',
+	rarity = 3,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
-	config = { extra = { odds = 4 } },
+	config = { extra = { odds = 2 } },
 	loc_vars = function(self, info_queue, card)
 		info_queue[#info_queue+1] = G.P_CENTERS.m_steel
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.after then
