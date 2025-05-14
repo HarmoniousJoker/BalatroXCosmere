@@ -73,15 +73,6 @@ SMODS.Atlas {
     py = 95
 }
 
---Custom Rarities
-G.C.CSMR_PRESERVERS = HEX('000000')
-SMODS.Rarity{
-  key = 'preserver',
-  badge_colour = G.C.CSMR_PRESERVERS,
-  default_weight = 0.25,
-  pools = {['Joker'] = true},
-}
-
 --Extra tabs in Mod Menu
 SMODS.current_mod.extra_tabs = function()
     local scale = 0.5
