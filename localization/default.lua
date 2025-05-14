@@ -85,7 +85,8 @@ return {
                 name = 'Lestibournes',
                 text = {
                     'Upgrade Poker Hand',
-                    'every #1#th time it is played'
+                    'every #1#th time it is played',
+                    '{C:inactive}({X:attention,C:white}#2#{C:inactive}: ({C:attention}#3#{C:inactive}/#1#)',
                 }
             },
             j_csmr_elend = {
