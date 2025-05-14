@@ -3,7 +3,7 @@ SMODS.Joker {
 	key = 'lestibournes',
 	atlas = 'scadrial_joker',
 	pos = { x = 3, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 2,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
@@ -16,9 +16,22 @@ SMODS.Joker {
 		}
 	},
 	loc_vars = function(self, info_queue, card)
-		local hand_selected = select(1, G.FUNCS.get_poker_hand_info(G.hand.highlighted))
+		local hand_selected = nil
+		if G.hand and G.hand.highlighted then
+			local ok, result = pcall(function()
+				return select(1, G.FUNCS.get_poker_hand_info(G.hand.highlighted))
+			end)
+			if ok then
+				hand_selected = result
+			end
+		end
 		if hand_selected == 'NULL' then
 			hand_selected = nil
+		end
+		if hand_selected then
+			if card.ability.extra.played_hands[hand_selected] == nil then
+				card.ability.extra.played_hands[hand_selected] = 0
+			end
 		end
 		return {
 			vars = {
@@ -27,6 +40,9 @@ SMODS.Joker {
 				card.ability.extra.played_hands[hand_selected],
 			}
 		}
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	update = function(self, card, dt)
 		if G.STAGE == G.STAGES.RUN then

@@ -3,13 +3,13 @@ SMODS.Joker {
 	key = 'vin',
 	atlas = 'scadrial_joker',
 	pos = { x = 1, y = 0 },
-	rarity = 'csmr_preserver',
-	cost = 4,
+	rarity = 2,
+	cost = 6,
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
 	enhancement_gate = 'm_lucky',
-	config = { extra = { rounds = 1, uses = 0, flag = false } },
+	config = { extra = { rounds = 8, uses = 0, flag = false } },
 	loc_vars = function(self, info_queue, card)
 		info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_lucky
 		return {
@@ -18,6 +18,9 @@ SMODS.Joker {
 				card.ability.extra.rounds - card.ability.extra.uses
 			}
 		}
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.setting_blind then

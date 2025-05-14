@@ -3,7 +3,7 @@ SMODS.Joker {
 	key = 'dockson',
 	atlas = 'scadrial_joker',
 	pos = { x = 4, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 2,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
@@ -18,6 +18,9 @@ SMODS.Joker {
 				card.ability.extra.rounds,
 			}
 		}
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.end_of_round and not context.blueprint and not context.repetition and not context.individual then

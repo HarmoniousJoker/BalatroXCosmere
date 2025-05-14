@@ -3,10 +3,13 @@ SMODS.Joker {
 	key = 'edgard',
 	atlas = 'joker',
 	pos = { x = 0, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 2,
 	cost = 6,
 	unlocked = true,
 	discovered = true,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
+	end,
 	calculate = function(self, card, context)
         if G.GAME.blind.in_blind and context.selling_card then
 			if context.card.config.center.key == 'j_csmr_edgard' then

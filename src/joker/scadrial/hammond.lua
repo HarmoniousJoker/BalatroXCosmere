@@ -3,7 +3,7 @@ SMODS.Joker {
 	key = 'hammond',
 	atlas = 'joker',
 	pos = { x = 0, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 2,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
@@ -12,12 +12,15 @@ SMODS.Joker {
 	config = { extra = { mult_mod = 4, pewter_tally = 0 } },
 	loc_vars = function(self, info_queue, card)
 		info_queue[#info_queue+1] = G.P_CENTERS.m_csmr_pewter
-		return { 
-			vars = { 
+		return {
+			vars = {
 				card.ability.extra.mult_mod,
 				card.ability.extra.pewter_tally * card.ability.extra.mult_mod
-			} 
+			}
 		}
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	update = function(self, card, dt)
 		if G.STAGE == G.STAGES.RUN then
