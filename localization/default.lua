@@ -179,8 +179,8 @@ return {
                 name = 'Nightblood',
                 text = {
                     'Before scoring, debuff a played card randomly',
-                    'and gain {X:mult,C:white}X#1#{} Mult',
-                    'debuffed cards reset at end of Ante',
+                    'and gain {X:mult,C:white}X#1#{} Mult.',
+                    'Debuffed cards reset at end of Ante',
                     'or when Joker is sold',
                     '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)'
                 }
