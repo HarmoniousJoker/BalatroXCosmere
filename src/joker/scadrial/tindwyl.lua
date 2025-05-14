@@ -3,12 +3,15 @@ SMODS.Joker {
 	key = 'tindwyl',
 	atlas = 'scadrial_joker',
 	pos = { x = 1, y = 1 },
-	rarity = 'csmr_preserver',
+	rarity = 1,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
 	config = { extra = { init_odds = 8, end_odds = 2 } },
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
+	end,
 	calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.scoring_hand then
             if context.other_card:is_preservation() then
@@ -29,7 +32,7 @@ SMODS.Joker {
 							return true end }))
 						SMODS.calculate_effect({message = 'Kinged!'}, preservation_card)
 					end
-                end 
+                end
             end
         end
     end

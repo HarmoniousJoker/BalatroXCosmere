@@ -3,19 +3,22 @@ SMODS.Joker {
 	key = 'elend',
 	atlas = 'scadrial_joker',
 	pos = { x = 5, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 1,
 	cost = 4,
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
 	config = { extra = { mult = 0, mult_mod = 2, odds = 4 } },
 	loc_vars = function(self, info_queue, card)
-		return { 
-			vars = { 
+		return {
+			vars = {
 				card.ability.extra.mult,
 				card.ability.extra.mult_mod,
-			} 
+			}
 		}
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.individual and context.cardarea == G.play and not context.blueprint then
