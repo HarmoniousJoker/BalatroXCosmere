@@ -3,18 +3,21 @@ SMODS.Joker {
 	key = 'cladent',
 	atlas = 'joker',
 	pos = { x = 0, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 3,
 	cost = 6,
 	unlocked = true,
 	discovered = true,
 	blueprint_compat = true,
 	config = { extra = { numerator = 2, odds = 8 } },
 	loc_vars = function(self, info_queue, card)
-		return { 
-			vars = { 
+		return {
+			vars = {
 				card.ability.extra.numerator,
-			} 
+			}
 		}
+	end,
+	set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
 	end,
 	calculate = function(self, card, context)
 		if context.setting_blind then

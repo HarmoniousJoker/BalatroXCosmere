@@ -3,7 +3,8 @@ SMODS.Joker {
 	key = 'csmr_ladymistborn',
 	atlas = 'scadrial_joker',
 	pos = { x = 2, y = 0 },
-	rarity = 'csmr_preserver',
+	rarity = 3,
+    cost = 6,
     in_pool = function(self)
         if config.evolution_enabled then
             return false
@@ -17,6 +18,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.m_glass
     end,
+    set_badges = function(self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_csmr_preserver'), G.C.BLACK, G.C.WHITE, 1.2)
+	end,
 	calculate = function(self, card, context)
 		if context.before and context.cardarea == G.jokers and not context.blueprint then
             for k, v in ipairs(context.scoring_hand) do
