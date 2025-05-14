@@ -109,7 +109,7 @@ Upgrade Poker Hand every 4th time it is played.
 4-in-16 chance to gain +2 Mult per scored face card.
 
 ### Marsh (Preserver)
-One unscored card has a 4-in-16 chance to become a Steel Card.
+One unscored card has a 8-in-16 chance to become a Steel Card.
 
 ### Tindwyl (Preserver)
 Played Preservation cards, when scored, have a 2-in-16 chance to become a King or Queen (does not change the Poker Hand).
