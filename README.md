@@ -90,43 +90,43 @@ This mod is aimed at adding Cosmere themed content to Balatro for Cosmere Fans.
 
 ## Jokers
 
-### Kelsier (Preserver)
+### Kelsier (Uncommon) (Preserver)
 Gain 20 Chips when 3 or more face cards are discarded at the same time.
 
-### Vin (Preserver)
+### Vin (Uncommon) (Preserver)
 Retrigger all Lucky cards. After 8 rounds, transform into [Lady Mistborn](#lady-mistborn).
 
-### Lady Mistborn (Preserver)
+### Lady Mistborn (Rare) (Preserver)
 Before scoring, Preservation cards have a 4-in-16 chance to become a Glass Card.
 
-### Dockson (Preserver)
+### Dockson (Uncommon) (Preserver)
 Earn $2 per scored Preservation number. Dies after 8 rounds.
 
-### Lestibournes (Preserver)
+### Lestibournes (Uncommon) (Preserver)
 Upgrade Poker Hand every 4th time it is played.
 
-### Elend (Preserver)
+### Elend (Common) (Preserver)
 4-in-16 chance to gain +2 Mult per scored face card.
 
-### Marsh (Preserver)
+### Marsh (Rare) (Preserver)
 One unscored card has a 8-in-16 chance to become a Steel Card.
 
-### Tindwyl (Preserver)
+### Tindwyl (Common) (Preserver)
 Played Preservation cards, when scored, have a 2-in-16 chance to become a King or Queen (does not change the Poker Hand).
 
-### Sazed (Preserver) (ART PENDING)
+### Sazed (Uncommon) (Preserver) (ART PENDING)
 Each Preserver Joker grants ×1 Mult.
 
-### Hammond (Preserver) (ART PENDING)
+### Hammond (Uncommon) (Preserver) (ART PENDING)
 Gain +4 Mult for each Pewter Card in your deck.
 
-### Cladent (Preserver) (ART PENDING)
+### Cladent (Rare) (Preserver) (ART PENDING)
 2-in-16 chance to disable the Boss Blind. Chance doubles each time it is not disabled, resetting after a successful disable.
 
-### Edgard (Preserver) (ART PENDING)
+### Edgard (Uncommon) (Preserver) (ART PENDING)
 Sell this Joker to immediately gain 75% of the required Chips for the current Blind.
 
-### TenSoon (Preserver) (ART PENDING)
+### TenSoon (Rare) (Preserver) (ART PENDING)
 Copy the ability of a random Joker each round.
 
 
