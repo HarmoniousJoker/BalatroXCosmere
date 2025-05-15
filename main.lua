@@ -199,6 +199,8 @@ end
 local base_calculate_joker = Card.calculate_joker
 function Card.calculate_joker(self,context)
 	local ret = base_calculate_joker(self, context)
+
+    -- Force triggers
     if context.joker_main then
         if self.force_trigger then
             self.force_trigger = false
@@ -235,17 +237,33 @@ function Card.calculate_joker(self,context)
 		end
 
 		if not ret then return ret end
-
+        
 		-- Mult
-		if ret.Xmult_mod then ret.Xmult_mod = ret.Xmult_mod * multiplier end
-		if ret.mult_mod then ret.mult_mod = ret.mult_mod * multiplier end
-		if ret.x_mult then ret.x_mult = ret.x_mult * multiplier end
+        if ret.x_mult then ret.x_mult = ret.x_mult * multiplier end
 		if ret.h_mult then ret.h_mult = ret.h_mult * multiplier end
 		if ret.mult then ret.mult = ret.mult * multiplier end
 
-		-- Chips
-		if ret.chip_mod then ret.chip_mod = ret.chip_mod * multiplier end
-		if ret.chips then ret.chips = ret.chips * multiplier end
+        -- Message overrides
+		if ret.Xmult_mod then
+            ret.x_mult = ret.Xmult_mod * multiplier
+            ret.Xmult_mod = 0
+            ret.message = nil
+        end
+		if ret.mult_mod then 
+            ret.mult = ret.mult_mod * multiplier
+            ret.mult_mod = 0
+            ret.message = nil
+        end
+
+        -- Chips
+        if ret.chips then ret.chips = ret.chips * multiplier end
+
+        -- Message overrides
+        if ret.chip_mod then
+            ret.chips = ret.chip_mod * multiplier
+            ret.chip_mod = 0
+            ret.message = nil
+        end
 		return ret
     end
 
@@ -253,16 +271,33 @@ function Card.calculate_joker(self,context)
         multiplier = self.ability.multiplier or 1
         if not ret then return ret end
 
-        -- Mult
-        if ret.Xmult_mod then ret.Xmult_mod = ret.Xmult_mod * multiplier end
-        if ret.mult_mod then ret.mult_mod = ret.mult_mod * multiplier end
+		-- Mult
         if ret.x_mult then ret.x_mult = ret.x_mult * multiplier end
-        if ret.h_mult then ret.h_mult = ret.h_mult * multiplier end
-        if ret.mult then ret.mult = ret.mult * multiplier end
+		if ret.h_mult then ret.h_mult = ret.h_mult * multiplier end
+		if ret.mult then ret.mult = ret.mult * multiplier end
+
+        -- Message overrides
+		if ret.Xmult_mod then
+            ret.x_mult = ret.Xmult_mod * multiplier
+            ret.Xmult_mod = 0
+            ret.message = nil
+        end
+		if ret.mult_mod then 
+            ret.mult = ret.mult_mod * multiplier
+            ret.mult_mod = 0
+            ret.message = nil
+        end
 
         -- Chips
-        if ret.chip_mod then ret.chip_mod = ret.chip_mod * multiplier end
         if ret.chips then ret.chips = ret.chips * multiplier end
+
+        -- Message overrides
+        if ret.chip_mod then
+            ret.chips = ret.chip_mod * multiplier
+            ret.chip_mod = 0
+            ret.message = nil
+        end
+
         self.ability.multiplier = 1
         return ret
     end
