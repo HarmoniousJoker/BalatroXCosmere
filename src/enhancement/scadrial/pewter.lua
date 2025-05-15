@@ -35,14 +35,7 @@ SMODS.Enhancement{
             card.ability.extra.uses = card.ability.extra.uses + 1
             card.ability.extra.updated = false
         end
-        if context.destroy_card and card.ability.extra.uses_left == 0  and context.cardarea ~= G.hand then
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    card:start_dissolve({G.C.BLACK, G.C.RED, G.C.RED}, true, 5)
-                    return true
-                end,
-                blocking = true
-            }))
+        if context.destroy_card and card.ability.extra.uses_left == 0 and context.destroy_card == card and context.cardarea ~= G.hand then
             return {
                 message = 'Dragged!',
                 remove = true
