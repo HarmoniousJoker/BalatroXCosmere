@@ -9,6 +9,13 @@ SMODS.Consumable {
     },
     discovered = true,
     unlocked = true,
+    in_pool = function(self, args)
+        if not G.GAME.destroyed_cards then
+            G.GAME.destroyed_cards = {}
+            return false
+        end
+        return true
+    end,
     loc_vars = function(self, info_queue, card)
 		return {
 			vars = {
