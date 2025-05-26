@@ -471,13 +471,13 @@ end
 
 --File loading
 --Scadrial
-load_folder('src/joker/scadrial')
-load_folder('src/tarot/scadrial')
-load_folder('src/enhancement/scadrial')
-load_folder('src/blind/scadrial')
+load_folder('content/joker/scadrial')
+load_folder('content/tarot/scadrial')
+load_folder('content/enhancement/scadrial')
+load_folder('content/blind/scadrial')
 
 --Nalthis
-load_folder('src/joker/nalthis')
-load_folder('src/tarot/nalthis')
-load_folder('src/enhancement/nalthis')
-load_folder('src/blind/nalthis')
+load_folder('content/joker/nalthis')
+load_folder('content/tarot/nalthis')
+load_folder('content/enhancement/nalthis')
+load_folder('content/blind/nalthis')
